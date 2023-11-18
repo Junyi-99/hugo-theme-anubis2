@@ -25,11 +25,15 @@
 
     --pagination-bg-color: #fafafa;
     --pagination-link-color: #696969;
+    --pagination-border-color: #eeeeee;
+    --pagination-border-radius: 5px;
 
     --post-info-color: grey;
 
     --switcher-color: #fff;
     --switcher-bg-color: #333; 
+    --switcher-border-color: #eeeeee;
+    --switcher-border-radius: 5px;
 
     --svg-color: #333;
     --svg-state-color: #a31d1d;

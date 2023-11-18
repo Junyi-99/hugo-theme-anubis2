@@ -4,7 +4,7 @@
 {{ end }}
 {{ $machineDateFormat := "2006-01-02" }}
 
-<div class="post-info">
+<div class="post-info noselect">
     {{ if .Params.date }}
         <div class="post-date dt-published">
             <a class="u-url" href="{{ .RelPermalink }}"><time datetime="{{ .Params.date.Format $machineDateFormat }}">

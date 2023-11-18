@@ -650,8 +650,10 @@ code.has-jax {
 }
 
 .pagination-item {
+    border: 1px solid var(--pagination-border-color);
+    border-radius: var(--pagination-border-radius);
     background: var(--pagination-bg-color);
-    padding: 0.75em 0.75em;
+    padding: 0.25em 0.75em;
 }
 
 .pagination-item a {
@@ -709,7 +711,8 @@ ul.language-select > li, ul.footer-menu > li {
     background: var(--switcher-bg-color);
     padding: 0.5em 1em;
     font-size: 16px;
-    border: none;
+    border: 1px solid var(--switcher-border-color);
+    border-radius: var(--switcher-border-radius);
     margin-bottom: 1em;
 }
 
@@ -759,6 +762,18 @@ ul.language-select > li, ul.footer-menu > li {
     vertical-align: middle;
     margin: 8px;
 }
+
+/* Others */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
 
 /* Media Queries */
 

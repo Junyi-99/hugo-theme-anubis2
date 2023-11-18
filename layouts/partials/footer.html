@@ -1,4 +1,4 @@
-<footer class="common-footer">
+<footer class="common-footer noselect">
     {{ $languagesCount := $.Site.Home.AllTranslations }}
     {{ if gt $languagesCount 1 }}
         {{ partial "language-switcher.html" . }}

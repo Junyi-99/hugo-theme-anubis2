@@ -21,13 +21,17 @@
 --bq-color: #ccc;
 --hr-color: #333;
 
---pagination-bg-color: #373737;
+--pagination-bg-color: #2e2e33;
 --pagination-link-color: #b6b6b6;
+--pagination-border-color: #333333;
+--pagination-border-radius: 5px;
 
 --post-info-color: grey;
 
 --switcher-color: #333;
 --switcher-bg-color: #fff;
+--switcher-border-color: #333333
+--switcher-border-radius: 5px;
 
 --svg-color: #ccc;
 --svg-state-color:#ff5858;

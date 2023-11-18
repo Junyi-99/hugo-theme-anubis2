@@ -1,9 +1,9 @@
-<div class="header-top">
+<div class="header-top noselect">
     {{ partial "site-title.html" . }}
     {{ partial "social.html" . }}
 </div>
 {{ if .Site.Menus.main }}
-    <nav>
+    <nav class="noselect">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">{{ .Name }}</a>
