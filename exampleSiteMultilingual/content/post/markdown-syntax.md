@@ -13,7 +13,7 @@ categories = [
     "themes",
     "syntax",
 ]
-authors = ["Mitrichius", "hugo"]
+authors = ["Junyi-99", "hugo"]
 aliases = ["migrate-from-jekyl"]
 favorite = true
 +++

@@ -1,4 +1,4 @@
-# Anubis2 Theme for Hugo [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/7d9ea909-ad7e-4e47-b7c9-eefb7522d8c6/deploy-status)](https://app.netlify.com/sites/hugo-theme-anubis/deploys) [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/paypalme/mitrichius/1)
+# Anubis2 Theme for Hugo [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/7d9ea909-ad7e-4e47-b7c9-eefb7522d8c6/deploy-status)](https://app.netlify.com/sites/hugo-theme-anubis/deploys)
 
 Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo.io/).
 
@@ -47,14 +47,14 @@ hugo mod init github.com/<your_user>/<your_project>
 
 Add the following to your `config.toml` or `config.yaml`
 ```toml
-theme =  ["github.com/Mitrichius/hugo-theme-anubis"]
+theme =  ["github.com/Junyi-99/hugo-theme-anubis2"]
 ```
 
 ### As Git Submodule
 
 Inside the folder of your Hugo site run:
 
-    $ git submodule add https://github.com/mitrichius/hugo-theme-anubis.git themes/anubis
+    $ git submodule add https://github.com/Junyi-99/hugo-theme-anubis2.git themes/anubis
 
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
@@ -249,7 +249,7 @@ If you want font awesome icons, download "Font Awesome For Desktop" and open svg
 Only works for production environment.
 
 ### Multilingual mode 
-Check config/example usage in [exampleSiteMultilingual](https://github.com/Mitrichius/hugo-theme-anubis/tree/master/exampleSiteMultilingual) directory and documentation on [Hugo site](https://gohugo.io/content-management/multilingual/).
+Check config/example usage in [exampleSiteMultilingual](https://github.com/Junyi-99/hugo-theme-anubis2/tree/master/exampleSiteMultilingual) directory and documentation on [Hugo site](https://gohugo.io/content-management/multilingual/).
 
 ### RSS 
 RSS is available by site url + /index.xml. Also available for specific language, section, taxonomy.  
@@ -287,10 +287,10 @@ Example: `{{< video src="/media/movie.mp4" type="video/mp4" preload="auto" capti
 
 ## Contributing
 
-If you find a bug or have an idea for a feature, feel free to write an [issue](https://github.com/mitrichius/hugo-theme-anubis/issues) or make a PR.
+If you find a bug or have an idea for a feature, feel free to write an [issue](https://github.com/Junyi-99/hugo-theme-anubis2/issues) or make a PR.
 
 ## TODO
-See [issues](https://github.com/mitrichius/hugo-theme-anubis/issues).
+See [issues](https://github.com/Junyi-99/hugo-theme-anubis2/issues).
 
 ## License
 MIT
