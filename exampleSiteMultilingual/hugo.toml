@@ -86,6 +86,30 @@ weight = 3
 [languages.pl.params]
 languageCode = "pl-pl"
 
+[languages.zh]
+languageName = "Chinese"
+
+[[languages.zh.menu.main]]
+identifier = "about"
+name = "O Hugo"
+url = "/about/"
+weight = 1
+
+[[languages.zh.menu.main]]
+identifier = "tags"
+name = "Tagi"
+url = "/tags/"
+weight = 2
+
+[[languages.zh.menu.main]]
+identifier = "archive"
+name = "Archiwum"
+url = "/posts/"
+weight = 3
+
+[languages.zh.params]
+languageCode = "zh-cn"
+
 [taxonomies]
 category = "categories"
 tag = "tags"
