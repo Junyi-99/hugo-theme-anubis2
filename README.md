@@ -295,5 +295,5 @@ See [issues](https://github.com/Junyi-99/hugo-theme-anubis2/issues).
 ## License
 MIT
 
-© Dmitry Kolosov
-2020
+© Junyi
+2024

@@ -1,5 +1,5 @@
 +++
-author = "Dmitry Kolosov"
+author = "Junyi"
 title = "Hidden Post"
 date = "2021-12-24"
 description = "Post available only by link"
