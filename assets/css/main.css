@@ -152,11 +152,13 @@ th, td {
     border: 1px double var(--table-border-color);
 }
 
+
 /* Code */
 pre {
-    padding: 1em;
     max-width: 100%;
     overflow: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 code,
@@ -224,9 +226,11 @@ header h2 {
     align-items: center;
     justify-content: space-between;
     vertical-align: middle;
+    margin-top: 1em;
 }
 
 .site-title {
+    display: inline;
     white-space: nowrap;
 }
 
@@ -247,8 +251,8 @@ header nav a {
 
 /* Social icons */
 .social-icons {
-    margin-top: 1em;
-    margin-bottom: 0;
+    display: inline;
+    margin: 1em 0 0 3em;
     padding: 0;
     list-style-type: none;
 }
