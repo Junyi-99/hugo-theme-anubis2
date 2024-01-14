@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Anubis"
+title = "Anubis2"
 theme = "anubis"
 paginate = 3
 
@@ -91,19 +91,19 @@ languageName = "Chinese"
 
 [[languages.zh.menu.main]]
 identifier = "about"
-name = "O Hugo"
+name = "关于"
 url = "/about/"
 weight = 1
 
 [[languages.zh.menu.main]]
 identifier = "tags"
-name = "Tagi"
+name = "标签"
 url = "/tags/"
 weight = 2
 
 [[languages.zh.menu.main]]
 identifier = "archive"
-name = "Archiwum"
+name = "归档"
 url = "/posts/"
 weight = 3
 
