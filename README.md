@@ -1,10 +1,10 @@
-# Anubis2 Theme for Hugo [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/750dfb45-73dc-4a96-8920-e701e0196959/deploy-status)](https://app.netlify.com/sites/hugo-anubis2/deploys)
+# Anubis2 Theme for Hugo [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/750dfb45-73dc-4a96-8920-e701e0196959/deploy-status)](https://app.netlify.com/sites/hugo-theme-anubis2/deploys)
 
 Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo.io/).
 
 [Demo](https://www.junyi.dev/)
 
-<img width="1051" alt="image" src="https://github.com/Junyi-99/hugo-theme-anubis/assets/14367694/5f68b742-4721-40ab-826a-49faa2e6f0a6">
+<img width="1294" alt="image" src="https://github.com/Junyi-99/hugo-theme-anubis2/assets/14367694/bfe848c4-a2df-4810-83d3-cef6b7088864">
 
 ## Features
 
