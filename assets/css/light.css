@@ -7,7 +7,7 @@
     --card-border-color: #eeeeee;
 
     --link-color:#1d60a3;
-    --link-state-color:#a31d1d;
+    --link-state-color:rgb(163, 29, 29);
     --link-state-border-color: rgba(163, 29, 29, .5);
 
     --thead-bg-color: lightgrey;
@@ -17,8 +17,9 @@
     --nav-link-color: #696969;
     --nav-border-radius: 10px;
 
-    --pre-color: #333;
-    --pre-bg-color: #f1f1f1;
+    --pre-color: rgb(31, 35, 40);
+    --pre-bg-color: rgba(175, 184, 193, 0.2);
+    --pre-border-color: rgba(175, 184, 193, 0.3);
 
     --bq-color: #ccc;
     --hr-color: #ccc;
