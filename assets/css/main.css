@@ -707,10 +707,11 @@ code.has-jax {
 /* Footer */
 
 .common-footer {
-    border-top: thin solid var(--hr-color);
     padding-top: 1.5em;
     margin-top: 3em;
-    font-size: 16px;
+    font-size: 12px;
+    margin-bottom: 1.5em;
+    color: var(--pagination-link-color);
 }
 
 .common-footer-bottom {

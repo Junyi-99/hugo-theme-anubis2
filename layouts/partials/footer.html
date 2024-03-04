@@ -13,11 +13,13 @@
             {{ end }}
             </ul>
         {{ end }}
-        <div class="copyright">
-            <p>© {{ if isset .Site.Params "author"}}{{ .Site.Params.author }}, {{end}}{{ now.Year }}<br>
+        
+        <div>
+            © {{ if isset .Site.Params "author"}}{{ .Site.Params.author }}, {{end}}{{ now.Year }}
+        </div>
+        <div>
             {{ i18n "powered" }} <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a>, {{ i18n "theme" }} <a target="_blank" rel="noopener noreferrer" href="https://github.com/Junyi-99/hugo-theme-anubis2">Anubis2</a>.<br>
             {{ partial "footer-extra.html" . }}
-            </p>  
         </div> 
     </div>
 
