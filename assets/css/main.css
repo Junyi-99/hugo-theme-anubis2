@@ -79,6 +79,11 @@ h1 {
 
 h2 {
     font-size: 1.2em;
+    margin-top: 3em;
+}
+
+h2:first-of-type {
+    margin-top: 0;
 }
 
 h3 {
@@ -415,9 +420,8 @@ article header h1 a {
 .post h4 a,
 .post h5 a,
 .post h6 a {
-    opacity: 0;
-    position: absolute;
-    left: -1.2rem;
+    opacity: 1;
+    border-bottom: none;
 }
 
 .post h1:hover a,
