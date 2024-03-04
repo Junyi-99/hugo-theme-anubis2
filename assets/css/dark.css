@@ -16,7 +16,8 @@
 --nav-link-color: #b6b6b6;
 
 --pre-color: #f8f8f2;
---pre-bg-color: #272822;
+--pre-bg-color: rgba(175, 184, 193, 0.1);
+--pre-border-color: rgba(175, 184, 193, 0.3);
 
 --bq-color: #ccc;
 --hr-color: #333;
