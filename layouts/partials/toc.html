@@ -1,9 +1,19 @@
-{{ $toc := and ($.Site.Params.toc) (ge .WordCount $.Site.Params.tocWordCount) }}
-
-{{ if isset .Params "toc" }}
-{{ $toc = .Params.toc }}
+{{ $toc := and ($.Site.Params.toc) (ge .WordCount $.Site.Params.tocWordCount) }} {{ if isset .Params "toc" }} {{ $toc = .Params.toc }} {{ end }} {{ if $toc }}
+<details class="toc">
+  <summary>Table of Contents</summary>
+  <div class="inner">{{ .TableOfContents }}</div>
+</details>
 {{ end }}
 
-{{ if $toc }}
-{{ .TableOfContents }}
-{{ end }}
+<script>
+  document.querySelector(".toc").addEventListener("click", function () {
+    event.preventDefault();
+    if (this.open) {
+      this.open = false;
+      this.classList.remove("expanded");
+    } else {
+      this.open = true;
+      this.classList.add("expanded");
+    }
+  });
+</script>
