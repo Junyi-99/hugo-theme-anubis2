@@ -36,23 +36,11 @@ Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo
 
 You need to install an extended version of Hugo to run this theme.
 
-### As Hugo Module (easier and recommended)
-
-Initiate a `hugo` module system from your project's root directory
-```shell
-hugo mod init github.com/<your_user>/<your_project>
-```
-
-Add the following to your `config.toml` or `config.yaml`
-```toml
-theme =  ["github.com/Junyi-99/hugo-theme-anubis2"]
-```
-
 ### As Git Submodule
 
 Inside the folder of your Hugo site run:
 
-    $ git submodule add https://github.com/Junyi-99/hugo-theme-anubis2.git themes/anubis
+    $ git submodule add https://github.com/Junyi-99/hugo-theme-anubis2.git themes/anubis2
 
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
