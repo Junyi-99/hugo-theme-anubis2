@@ -76,7 +76,7 @@ main {
 /* Table of Contents */
 
 .toc {
-    /* cursor: zoom-in; */
+    cursor: zoom-in;
     display: block;
     
     margin-top: 1em;
@@ -90,10 +90,10 @@ main {
     font-size: 14px;
     font-weight: bold;
 }
-/* 
+
 .toc.expanded {
     cursor: zoom-out;
-} */
+}
 
 .toc .inner {
     margin: 0px;

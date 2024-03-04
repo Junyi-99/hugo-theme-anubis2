@@ -5,15 +5,17 @@
 </details>
 {{ end }}
 
-<!-- <script>
+<script>
   document.querySelector(".toc").addEventListener("click", function () {
-    event.preventDefault();
-    if (this.open) {
-      this.open = false;
-      this.classList.remove("expanded");
-    } else {
-      this.open = true;
-      this.classList.add("expanded");
+    if (event.target.tagName !== "A") {
+      event.preventDefault();
+      if (this.open) {
+        this.open = false;
+        this.classList.remove("expanded");
+      } else {
+        this.open = true;
+        this.classList.add("expanded");
+      }
     }
   });
-</script> -->
+</script>
