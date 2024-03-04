@@ -25,8 +25,8 @@
     {{ if gt .Site.Params.readNextPosts 0 }}
         {{ $related := .Site.RegularPages.Related . | first .Site.Params.readNextPosts }}
         {{ with $related }}
-            <h3 class="read-next-title">{{ i18n "readNext" }}</h3>
-            <ul class="read-next-posts">
+            <h3 class="read-next-title noselect">{{ i18n "readNext" }}</h3>
+            <ul class="read-next-posts noselect">
                 {{ range . }}
                 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}

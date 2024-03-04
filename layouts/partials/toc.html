@@ -1,5 +1,5 @@
 {{ $toc := and ($.Site.Params.toc) (ge .WordCount $.Site.Params.tocWordCount) }} {{ if isset .Params "toc" }} {{ $toc = .Params.toc }} {{ end }} {{ if $toc }}
-<details class="toc">
+<details class="toc noselect">
   <summary>Table of Contents</summary>
   <div class="inner">{{ .TableOfContents }}</div>
 </details>
