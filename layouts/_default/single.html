@@ -11,17 +11,17 @@
         <div class="post-header">
             <header>
                 <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}}">{{ trim .Title  " " | markdownify }}</h1>
-
                 {{ partial "post-language-switcher.html" . }}
             </header>
+            {{ partial "post-info.html" . }}
         </div>
         {{ partial "toc.html" .}}
         <div class="content e-content">
             {{ .Content }}
         </div>
-        {{ partial "post-info.html" . }}
-    </article>
 
+    </article>
+    
     {{ if gt .Site.Params.readNextPosts 0 }}
         {{ $related := .Site.RegularPages.Related . | first .Site.Params.readNextPosts }}
         {{ with $related }}
