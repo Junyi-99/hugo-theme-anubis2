@@ -30,6 +30,12 @@
 {{ end }}
 
 /* Basic */
+
+:root {
+    --card-border-radius: 0.5em;
+    --card-margin: 1.5em;
+}
+
 html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     /* 1 */
@@ -280,12 +286,13 @@ header h2 {
 
 header nav:not(:empty){
     background: var(--nav-bg-color);
-    margin-top: 1em;
+    margin-top: var(--card-margin);
     max-width: 100%;
     text-align: center;
     padding: 0.5em 0;
     border: 1px solid var(--card-border-color);
     border-radius: var(--card-border-radius);
+    font-size: 14px;
 }
 
 header nav a {
@@ -343,7 +350,7 @@ main h1 {
 }
 
 article:not(:last-of-type) {
-    margin-bottom: 1.5em;
+    margin-bottom: var(--card-margin);
 }
 
 .post-short-list:first-of-type {
@@ -408,19 +415,19 @@ article:not(:last-of-type) {
 }
 
 .post-title.favorite::after {
-    content: "☆";
+    content: "🌟";
     display: inline-block;
     margin-left: 0.2em;
 }
 
 .post-title.draft::after {
-    content: "✎";
+    content: "✏️";
     display: inline-block;
     margin-left: 0.2em;
 }
 
 .post-title.favorite.draft::after {
-    content: "☆ ✎";
+    content: "🌟 ✏️";
     display: inline-block;
     margin-left: 0.2em;
 }
