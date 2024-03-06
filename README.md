@@ -93,7 +93,7 @@ params:
   tocWordCount: 300 # ...when a post is longer than 300 words
   copyCodeButton: true # true by default
   rssAsSocialIcon: true
-  mathjax: false # https://www.mathjax.org/
+  mathjax: false # https://www.mathjax.org/ loading cost 257.4KiB network traffic
   # utteranc.es support
   utterancesRepo: ""  # mandatory
   utterancesTheme: "" # optional
