@@ -2,7 +2,7 @@
 
 Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo.io/), check our [Demo](https://www.junyi.dev/).
 
-![image](https://github.com/Junyi-99/hugo-theme-anubis2/assets/14367694/5336f087-daa5-4814-a65d-27a871617d7a)
+![image](https://github.com/Junyi-99/hugo-theme-anubis2/assets/14367694/8d9a591b-e168-4328-a770-eb2e8f04f657)
 
 ## Features
 
