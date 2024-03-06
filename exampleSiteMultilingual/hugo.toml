@@ -2,7 +2,7 @@ baseURL = "https://example.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Anubis2"
-theme = "anubis"
+theme = "anubis2"
 paginate = 3
 
 disqusShortname = ""
@@ -17,12 +17,13 @@ description = "Anubis2 is another simple minimalist theme for Hugo blog engine."
 dateFormat = "2006-01-02"
 paginationSinglePost = true
 style = "auto"
-readMore = false
+readMore = true
 readNextPosts = 2
 copyCodeButton = true
 rssAsSocialIcon = true
 locale = "en-us"
 mathjax = false
+toc = true
 
 # Graphcomment support
 graphcommentId = ""
@@ -45,43 +46,56 @@ url = "https://github.com/Junyi-99/hugo-theme-anubis2"
 languageName = "English"
 
 [[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
 identifier = "about"
 name = "About"
 url = "/about/"
-weight = 1
+weight = 2
 
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
 url = "/tags/"
-weight = 2
+weight = 3
 
 [[menu.main]]
 name = "Archive"
 identifier = "archive"
 url = "/posts/"
-weight = 3
+weight = 4
 
 [languages.pl]
 languageName = "Polski"
+
+
+[[languages.pl.menu.main]]
+identifier = "home"
+name = "Strona Główna"
+url = "/"
+weight = 1
 
 [[languages.pl.menu.main]]
 identifier = "about"
 name = "O Hugo"
 url = "/about/"
-weight = 1
+weight = 2
 
 [[languages.pl.menu.main]]
 identifier = "tags"
 name = "Tagi"
 url = "/tags/"
-weight = 2
+weight = 3
 
 [[languages.pl.menu.main]]
 identifier = "archive"
 name = "Archiwum"
 url = "/posts/"
-weight = 3
+weight = 4
 
 [languages.pl.params]
 languageCode = "pl-pl"
@@ -90,22 +104,28 @@ languageCode = "pl-pl"
 languageName = "Chinese"
 
 [[languages.zh.menu.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = 1
+
+[[languages.zh.menu.main]]
 identifier = "about"
 name = "关于"
 url = "/about/"
-weight = 1
+weight = 2
 
 [[languages.zh.menu.main]]
 identifier = "tags"
 name = "标签"
 url = "/tags/"
-weight = 2
+weight = 3
 
 [[languages.zh.menu.main]]
 identifier = "archive"
 name = "归档"
 url = "/posts/"
-weight = 3
+weight = 4
 
 [languages.zh.params]
 languageCode = "zh-cn"
