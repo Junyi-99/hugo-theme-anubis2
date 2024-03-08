@@ -34,6 +34,8 @@
 :root {
     --card-border-radius: 0.5em;
     --card-margin: 1.5em;
+    --icon-margin-left: 1em;
+    --icon-margin-top: 1em;
 }
 
 html {
@@ -303,7 +305,7 @@ header nav a {
 /* Social icons */
 .social-icons {
     display: inline;
-    margin: 1em 0 0 1em;
+    margin: var(--icon-margin-top) 0 0 var(--icon-margin-left);
     padding: 0;
     list-style-type: none;
 }
@@ -313,7 +315,7 @@ header nav a {
 }
 
 .social-icons li:not(:first-of-type) {
-    margin-left: 0.5em;
+    margin-left: var(--icon-margin-left);
 }
 
 .social-icons a:hover,
@@ -779,7 +781,7 @@ ul.language-select > li, ul.footer-menu > li {
 .theme-switcher {
     color: var(--switcher-color);
     /* padding: 0.5em 1em; */
-    margin: 1em 0 0 1.5em;
+    margin: var(--icon-margin-top) 0 0 var(--icon-margin-left);
     cursor: pointer;
 }
 
