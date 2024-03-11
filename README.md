@@ -55,7 +55,7 @@ Example of config.yaml:
 languageCode: "en-us"
 baseUrl: ""
 title: "Anubis"
-theme: "anubis"
+theme: "anubis2"
 paginate: 10
 disqusShortname: "yourdiscussshortname"
 googleAnalytics: "G-12345"
