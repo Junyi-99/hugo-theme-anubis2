@@ -1,10 +1,16 @@
-{{ $style := "light-without-switcher" }}
-{{ if and (isset site.Params "style") (ne site.Params.style "") }}
-    {{ $style = site.Params.style | lower }}
+{{ $colorTheme := "light" }}
+{{ $colorThemeSwitcher := false }}
+
+{{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
+    {{ $colorTheme = site.Params.colortheme | lower }}
 {{ end }}
 
-{{ if not (in (slice "light-without-switcher" "dark-without-switcher") $style) }}
-    {{ if ne "auto-without-switcher" $style }}
+{{ if and (isset site.Params "colorthemeswitcher") }}
+    {{ $colorThemeSwitcher = site.Params.colorthemeswitcher }}
+{{ end }}
+
+{{ if or (eq $colorThemeSwitcher true) (eq $colorTheme "auto") }}
+    {{ if site.Params.colorthemeswitcher }}
         <div class="theme-switcher">
             {{ partial "font-awesome.html" (dict "iconName" "theme-light" "custom" false) }}
         </div>
@@ -12,7 +18,7 @@
 
     <script>
         const STORAGE_KEY = 'user-color-scheme'
-        const defaultTheme = {{ $style }}
+        const defaultTheme = {{ $colorTheme }}
 
         let currentTheme
         let switchButton
@@ -23,52 +29,38 @@
             document.documentElement.setAttribute('data-theme', currentTheme)
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             switchButton = document.querySelector('.theme-switcher')
             currentTheme = detectCurrentScheme()
-            if (currentTheme == 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark')
-            }
-            if (currentTheme == 'auto') {
+            
+            if (currentTheme === 'auto') {
                 autoChangeScheme(autoDefinedScheme);
                 autoDefinedScheme.addListener(autoChangeScheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', currentTheme)
             }
-
+        
             if (switchButton) {
                 switchButton.addEventListener('click', switchTheme, false)
             }
-        
+
             showContent()
         })
 
         function detectCurrentScheme() {
             if (localStorage !== null && localStorage.getItem(STORAGE_KEY)) {
                 return localStorage.getItem(STORAGE_KEY)
-            } 
+            }
             if (defaultTheme) {
                 return defaultTheme
-            } 
-            if (!window.matchMedia) {
-                return 'light'
-            } 
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                return 'dark'
             }
-            return 'light'
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
 
         function switchTheme(e) {
-            if (currentTheme == 'dark') {
-                if (localStorage !== null)
-                    localStorage.setItem(STORAGE_KEY, 'light')
-                document.documentElement.setAttribute('data-theme', 'light')
-                currentTheme = 'light'
-            } else {
-                if (localStorage !== null)
-                    localStorage.setItem(STORAGE_KEY, 'dark')
-                document.documentElement.setAttribute('data-theme', 'dark')
-                currentTheme = 'dark'
-            }
+            currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+            if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
+            document.documentElement.setAttribute('data-theme', currentTheme);
         }
 
         function showContent() {

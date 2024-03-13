@@ -1,35 +1,75 @@
-/* dark.css */ 
---font-color: #dadadb;
---bg-color: #1d1e20;
-  
---card-color: #2e2e33;
---card-border-color: #333333;
+@media (prefers-color-scheme: dark) {
+    html {
+        --font-color: #dadadb;
+        --bg-color: #1d1e20;
 
---link-color:#599ada;
---link-state-color:#ff5858;
---link-state-border-color: rgba(238, 54, 54, 0.5);
+        --card-color: #2e2e33;
+        --card-border-color: #333333;
 
---thead-bg-color: #343a40;
---table-border-color: lightgrey;
+        --link-color: #599ada;
+        --link-state-color: #ff5858;
+        --link-state-border-color: rgba(238, 54, 54, 0.5);
 
---nav-bg-color: #2e2e33;
---nav-link-color: #b6b6b6;
+        --thead-bg-color: #343a40;
+        --table-border-color: lightgrey;
 
---pre-color: #f8f8f2;
---pre-bg-color: rgba(175, 184, 193, 0.1);
---pre-border-color: rgba(175, 184, 193, 0.3);
+        --nav-bg-color: #2e2e33;
+        --nav-link-color: #b6b6b6;
 
---bq-color: #ccc;
---hr-color: #333;
+        --pre-color: #f8f8f2;
+        --pre-bg-color: rgba(175, 184, 193, 0.1);
+        --pre-border-color: rgba(175, 184, 193, 0.3);
 
---pagination-bg-color: #2e2e33;
---pagination-link-color: #b6b6b6;
---pagination-border-color: #333333;
---pagination-border-radius: 5px;
+        --bq-color: #ccc;
+        --hr-color: #333;
 
---post-info-color: grey;
+        --pagination-bg-color: #2e2e33;
+        --pagination-link-color: #b6b6b6;
+        --pagination-border-color: #333333;
+        --pagination-border-radius: 5px;
 
---switcher-color: #fff;
+        --post-info-color: grey;
 
---svg-color: #ccc;
---svg-state-color:#ff5858;
+        --switcher-color: #fff;
+
+        --svg-color: #ccc;
+        --svg-state-color: #ff5858;
+    }
+}
+/* Same as above.  */
+html[data-theme='dark'] {
+    --font-color: #dadadb;
+    --bg-color: #1d1e20;
+
+    --card-color: #2e2e33;
+    --card-border-color: #333333;
+
+    --link-color: #599ada;
+    --link-state-color: #ff5858;
+    --link-state-border-color: rgba(238, 54, 54, 0.5);
+
+    --thead-bg-color: #343a40;
+    --table-border-color: lightgrey;
+
+    --nav-bg-color: #2e2e33;
+    --nav-link-color: #b6b6b6;
+
+    --pre-color: #f8f8f2;
+    --pre-bg-color: rgba(175, 184, 193, 0.1);
+    --pre-border-color: rgba(175, 184, 193, 0.3);
+
+    --bq-color: #ccc;
+    --hr-color: #333;
+
+    --pagination-bg-color: #2e2e33;
+    --pagination-link-color: #b6b6b6;
+    --pagination-border-color: #333333;
+    --pagination-border-radius: 5px;
+
+    --post-info-color: grey;
+
+    --switcher-color: #fff;
+
+    --svg-color: #ccc;
+    --svg-state-color: #ff5858;
+}

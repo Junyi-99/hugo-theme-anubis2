@@ -21,12 +21,18 @@
 
 {{ partial "favicons.html" . }}
 
-{{ $style := "light-without-switcher" }}
-{{ if and (isset site.Params "style") (ne site.Params.style "") }}
-    {{ $style = site.Params.style | lower }}
+{{ $colorTheme := "light" }}
+{{ $colorThemeSwitcher := false }}
+
+{{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
+    {{ $colorTheme = site.Params.colortheme | lower }}
 {{ end }}
 
-{{ if not (in (slice "light-without-switcher" "dark-without-switcher") $style) }}
+{{ if and (isset site.Params "colorthemeswitcher") }}
+    {{ $colorThemeSwitcher = site.Params.colorthemeswitcher }}
+{{ end }}
+
+{{ if or (eq $colorThemeSwitcher true) (eq $colorTheme "auto") }}
 <style>
   body {
     visibility: hidden;
@@ -45,6 +51,8 @@
 {{end}}
 
 {{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/main.css") }}
+{{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/light.css") }}
+{{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/dark.css") }}
 
 {{ if .Site.Params.copyCodeButton | default true }}
     {{ partial "resource.html" (dict "context" . "type" "js" "filename" "js/copy-code.js") }}

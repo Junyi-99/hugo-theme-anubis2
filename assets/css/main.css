@@ -1,39 +1,10 @@
-{{ $light := resources.Get "css/light.css" }}
-{{ $dark := resources.Get "css/dark.css" }}
-
-{{ $style := "light-without-switcher" }}
-{{ if and (isset site.Params "style") (ne site.Params.style "") }}
-    {{ $style = site.Params.style | lower }}
-{{ end }}
-
-{{ if eq $style "dark-without-switcher" }}
-:root {
-    {{ $dark.Content }}
-}
-
-{{ else }}
-
-{{ $light.Content }}
-
-{{ if eq $style "auto-without-switcher" }}
-@media (prefers-color-scheme: dark) {
-    :root {
-        {{ $dark.Content }}
-    }
-}
-{{ else if ne $style "light-without-switcher" }}
-[data-theme="dark"] {
-    {{ $dark.Content }}
-}
-{{ end }}
-
-{{ end }}
-
 /* Basic */
 
 :root {
     --card-border-radius: 0.5em;
     --card-margin: 1.5em;
+    --icon-margin-left: 1em;
+    --icon-margin-top: 1em;
 }
 
 html {
@@ -205,7 +176,7 @@ pre,
 kbd {
     color: var(--pre-color);
     background-color: var(--pre-bg-color);
-    font-family: monospace;
+    font-family: 'Courier New', 'Consolas', monospace;
     font-size: 0.90em;
     line-height: 154%;
     border-radius: 6px;
@@ -303,7 +274,7 @@ header nav a {
 /* Social icons */
 .social-icons {
     display: inline;
-    margin: 1em 0 0 1em;
+    margin: var(--icon-margin-top) 0 0 var(--icon-margin-left);
     padding: 0;
     list-style-type: none;
 }
@@ -313,7 +284,7 @@ header nav a {
 }
 
 .social-icons li:not(:first-of-type) {
-    margin-left: 0.5em;
+    margin-left: var(--icon-margin-left);
 }
 
 .social-icons a:hover,
@@ -779,7 +750,7 @@ ul.language-select > li, ul.footer-menu > li {
 .theme-switcher {
     color: var(--switcher-color);
     /* padding: 0.5em 1em; */
-    margin: 1em 0 0 1.5em;
+    margin: var(--icon-margin-top) 0 0 var(--icon-margin-left);
     cursor: pointer;
 }
 
