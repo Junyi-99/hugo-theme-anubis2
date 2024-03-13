@@ -1,10 +1,15 @@
-{{ $colorTheme := "light-without-switcher" }}
+{{ $colorTheme := "light" }}
+{{ $colorThemeSwitcher := false }}
 
 {{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
     {{ $colorTheme = site.Params.colortheme | lower }}
 {{ end }}
 
-{{ if not (in (slice "light-without-switcher" "dark-without-switcher") $colorTheme) }}
+{{ if and (isset site.Params "colorthemeswitcher") }}
+    {{ $colorThemeSwitcher = site.Params.colorthemeswitcher }}
+{{ end }}
+
+{{ if or (eq $colorThemeSwitcher true) (eq $colorTheme "auto") }}
     {{ if site.Params.colorthemeswitcher }}
         <div class="theme-switcher">
             {{ partial "font-awesome.html" (dict "iconName" "theme-light" "custom" false) }}
