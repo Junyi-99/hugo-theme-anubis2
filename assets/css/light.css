@@ -1,14 +1,12 @@
-:root {
-   /* light.css */ 
+html[data-theme='light'] {
     --font-color: #1e1e1e;
     --bg-color: #ffffff;
-    
+
     --card-color: #fafafa;
     --card-border-color: #eeeeee;
-    
 
-    --link-color:#1d60a3;
-    --link-state-color:rgb(163, 29, 29);
+    --link-color: #1d60a3;
+    --link-state-color: rgb(163, 29, 29);
     --link-state-border-color: rgba(163, 29, 29, .5);
 
     --thead-bg-color: lightgrey;

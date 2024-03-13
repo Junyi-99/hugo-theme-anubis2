@@ -45,6 +45,8 @@
 {{end}}
 
 {{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/main.css") }}
+{{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/light.css") }}
+{{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/dark.css") }}
 
 {{ if .Site.Params.copyCodeButton | default true }}
     {{ partial "resource.html" (dict "context" . "type" "js" "filename" "js/copy-code.js") }}
