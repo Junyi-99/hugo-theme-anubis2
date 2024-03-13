@@ -1,65 +1,66 @@
-{{ $style := "light-without-switcher" }}
-{{ if and (isset site.Params "style") (ne site.Params.style "") }}
-{{ $style = site.Params.style | lower }}
+{{ $colorTheme := "light-without-switcher" }}
+
+{{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
+    {{ $colorTheme = site.Params.colortheme | lower }}
 {{ end }}
 
-{{ if not (in (slice "light-without-switcher" "dark-without-switcher") $style) }}
-{{ if ne "auto-without-switcher" $style }}
-<div class="theme-switcher">
-    {{ partial "font-awesome.html" (dict "iconName" "theme-light" "custom" false) }}
-</div>
-{{ end }}
+{{ if not (in (slice "light-without-switcher" "dark-without-switcher") $colorTheme) }}
+    {{ if site.Params.colorthemeswitcher }}
+        <div class="theme-switcher">
+            {{ partial "font-awesome.html" (dict "iconName" "theme-light" "custom" false) }}
+        </div>
+    {{ end }}
 
-<script>
-    const STORAGE_KEY = 'user-color-scheme'
-    const defaultTheme = {{ $style }}
+    <script>
+        const STORAGE_KEY = 'user-color-scheme'
+        const defaultTheme = {{ $colorTheme }}
 
-    let currentTheme
-    let switchButton
-    let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
+        let currentTheme
+        let switchButton
+        let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
 
-    const autoChangeScheme = e => {
-        currentTheme = e.matches ? 'dark' : 'light'
-        document.documentElement.setAttribute('data-theme', currentTheme)
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        switchButton = document.querySelector('.theme-switcher')
-        currentTheme = detectCurrentScheme()
-        
-        if (currentTheme === 'auto') {
-            autoChangeScheme(autoDefinedScheme);
-            autoDefinedScheme.addListener(autoChangeScheme);
-        } else {
+        const autoChangeScheme = e => {
+            currentTheme = e.matches ? 'dark' : 'light'
             document.documentElement.setAttribute('data-theme', currentTheme)
         }
-    
-        if (switchButton) {
-            switchButton.addEventListener('click', switchTheme, false)
+
+        document.addEventListener('DOMContentLoaded', function () {
+            switchButton = document.querySelector('.theme-switcher')
+            currentTheme = detectCurrentScheme()
+            
+            if (currentTheme === 'auto') {
+                autoChangeScheme(autoDefinedScheme);
+                autoDefinedScheme.addListener(autoChangeScheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', currentTheme)
+            }
+        
+            if (switchButton) {
+                switchButton.addEventListener('click', switchTheme, false)
+            }
+
+            showContent()
+        })
+
+        function detectCurrentScheme() {
+            if (localStorage !== null && localStorage.getItem(STORAGE_KEY)) {
+                return localStorage.getItem(STORAGE_KEY)
+            }
+            if (defaultTheme) {
+                return defaultTheme
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
 
-        showContent()
-    })
-
-    function detectCurrentScheme() {
-        if (localStorage !== null && localStorage.getItem(STORAGE_KEY)) {
-            return localStorage.getItem(STORAGE_KEY)
+        function switchTheme(e) {
+            currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+            if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
+            document.documentElement.setAttribute('data-theme', currentTheme);
         }
-        if (defaultTheme) {
-            return defaultTheme
+
+        function showContent() {
+            document.body.style.visibility = 'visible';
+            document.body.style.opacity = 1;
         }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-
-    function switchTheme(e) {
-        currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
-        if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
-        document.documentElement.setAttribute('data-theme', currentTheme);
-    }
-
-    function showContent() {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = 1;
-    }
-</script>
+    </script>
 {{ end }}
