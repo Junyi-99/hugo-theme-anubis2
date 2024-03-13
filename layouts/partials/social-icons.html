@@ -1,0 +1,37 @@
+<ul class="social-icons">
+
+{{ range $.Site.Params.Social }}
+    {{ if and (isset $.Site.Data.social.social_icons .id) (isset . "url") }}
+        <li>
+            <a {{ printf "href=%q" .url | safeHTMLAttr }} title="{{ humanize .id }}" rel="me">
+            {{ partial "font-awesome.html" (dict "iconName" .id "custom" false) }}
+            </a>
+        </li>
+    {{ else if and (isset $.Site.Data.social.social_icons .id) (isset . "name") }}
+        {{ $url := index $.Site.Data.social.social_icons .id }}
+        {{ $ref := printf $url .name }}
+        <li>
+            <a {{ printf "href=%q" $ref | safeHTMLAttr }} title="{{ humanize .id }}" rel="me">
+            {{ partial "font-awesome.html" (dict "iconName" .id "custom" false) }}
+            </a>
+        </li>
+    {{ else if (isset . "url") }}
+        <li>
+            <a href="{{ printf .url }}" title="{{ humanize .id }}" rel="me">
+                {{ partial "font-awesome.html" (dict "iconName" .id "custom" true) }}
+            </a>
+        </li>
+    {{ end }}
+{{ end }}
+
+{{ if .Site.Params.rssAsSocialIcon }}
+    {{ with .Site.Home.OutputFormats.Get "rss" -}}
+        <li>
+            <a {{ printf "href=%q" .Permalink | safeHTMLAttr }} title="RSS" rel="me">
+            {{ partial "font-awesome.html" (dict "iconName" "rss" "custom" false) }}
+            </a>
+        </li>
+    {{ end -}}
+{{ end }}
+
+</ul>
