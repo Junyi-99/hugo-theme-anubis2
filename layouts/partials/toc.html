@@ -17,16 +17,19 @@
 
 
 <script>
-  document.querySelector(".toc").addEventListener("click", function () {
-    if (event.target.tagName !== "A") {
-      event.preventDefault();
-      if (this.open) {
-        this.open = false;
-        this.classList.remove("expanded");
-      } else {
-        this.open = true;
-        this.classList.add("expanded");
+  var toc = document.querySelector(".toc");
+  if (toc) {
+    toc.addEventListener("click", function () {
+      if (event.target.tagName !== "A") {
+        event.preventDefault();
+        if (this.open) {
+          this.open = false;
+          this.classList.remove("expanded");
+        } else {
+          this.open = true;
+          this.classList.add("expanded");
+        }
       }
-    }
-  });
+    });
+  }
 </script>
