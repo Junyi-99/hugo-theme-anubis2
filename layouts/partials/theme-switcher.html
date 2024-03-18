@@ -26,7 +26,8 @@
 
         const autoChangeScheme = e => {
             currentTheme = e.matches ? 'dark' : 'light'
-            document.documentElement.setAttribute('data-theme', currentTheme)
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            changeGiscusTheme(currentTheme);
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -61,7 +62,7 @@
             currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
             if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
             document.documentElement.setAttribute('data-theme', currentTheme);
-            changeGiscusTheme();
+            changeGiscusTheme(currentTheme);
         }
 
         function showContent() {
@@ -69,9 +70,7 @@
             document.body.style.opacity = 1;
         }
 
-        function changeGiscusTheme () {
-            const theme = detectCurrentScheme();
-            
+        function changeGiscusTheme (theme) {           
             function sendMessage(message) {
               const iframe = document.querySelector('iframe.giscus-frame');
               if (!iframe) return;
