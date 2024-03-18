@@ -188,6 +188,7 @@ kbd {
 pre code, pre kbd {
     color: inherit;
     background-color: inherit;
+    border: none;
 }
 
 /* Styles */

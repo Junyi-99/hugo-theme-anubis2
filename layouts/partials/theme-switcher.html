@@ -18,7 +18,7 @@
 
     <script>
         const STORAGE_KEY = 'user-color-scheme'
-        const defaultTheme = {{ $colorTheme }}
+        const defaultTheme = "{{ $colorTheme }}"
 
         let currentTheme
         let switchButton
@@ -44,7 +44,7 @@
                 switchButton.addEventListener('click', switchTheme, false)
             }
 
-            showContent()
+            showContent();
         })
 
         function detectCurrentScheme() {
@@ -61,11 +61,28 @@
             currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
             if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
             document.documentElement.setAttribute('data-theme', currentTheme);
+            changeGiscusTheme();
         }
 
         function showContent() {
             document.body.style.visibility = 'visible';
             document.body.style.opacity = 1;
+        }
+
+        function changeGiscusTheme () {
+            const theme = detectCurrentScheme();
+            
+            function sendMessage(message) {
+              const iframe = document.querySelector('iframe.giscus-frame');
+              if (!iframe) return;
+              iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            }
+        
+            sendMessage({
+              setConfig: {
+                theme: theme
+              }
+            });
         }
     </script>
 {{ end }}
