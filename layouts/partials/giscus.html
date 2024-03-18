@@ -4,6 +4,42 @@
 {{ $category := .Site.Params.GiscusDiscussionCategory | default "Announcements" }}
 {{ $lazyload := .Site.Params.GiscusLazyLoad | default false }}
 
+<script>
+        function detectCurrentScheme() {
+        if (localStorage !== null && localStorage.getItem('user-color-scheme')) {
+                return localStorage.getItem('user-color-scheme')
+        }
+        if (defaultTheme) {
+                return defaultTheme
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        let giscusTheme = detectCurrentScheme();
+        let giscusAttributes = {
+                "src": "https://giscus.app/client.js",
+                "data-repo": "{{- .Site.Params.GiscusRepo -}}",
+                "data-repo-id": "{{- .Site.Params.GiscusRepoId -}}",
+                "data-category": "{{- $category -}}",
+                "data-category-id": "{{- .Site.Params.GiscusCategoryId -}}",
+                "data-mapping": "{{ $mapping }}",
+                "data-strict": "0",
+                "data-reactions-enabled": "1",
+                "data-emit-metadata": "0",
+                "data-input-position": "bottom",
+                "data-theme": giscusTheme,
+                "data-lang": "{{ $language }}",
+                "crossorigin": "anonymous",
+                "lazyload": "{{ $lazyload }}",
+                "async": true
+        }
+        let main = document.querySelector('main');
+        let giscusScript = document.createElement('script');
+        Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+        main.appendChild(giscusScript);
+
+</script>
+{{/*  
 <script src="https://giscus.app/client.js"
         data-repo="{{- .Site.Params.GiscusRepo -}}"
         data-repo-id="{{- .Site.Params.GiscusRepoId -}}"
@@ -21,4 +57,4 @@
         data-loading="lazy"
         {{ end }}
         async>
-</script>
+</script>  */}}
