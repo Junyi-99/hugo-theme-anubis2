@@ -17,7 +17,7 @@
         --nav-link-color: #b6b6b6;
 
         --pre-color: #f8f8f2;
-        --pre-bg-color: rgba(175, 184, 193, 0.1);
+        --pre-bg-color: #292b2d;
         --pre-border-color: rgba(175, 184, 193, 0.3);
 
         --bq-color: #ccc;
@@ -55,7 +55,7 @@ html[data-theme='dark'] {
     --nav-link-color: #b6b6b6;
 
     --pre-color: #f8f8f2;
-    --pre-bg-color: rgba(175, 184, 193, 0.1);
+    --pre-bg-color: #292b2d;
     --pre-border-color: rgba(175, 184, 193, 0.3);
 
     --bq-color: #ccc;

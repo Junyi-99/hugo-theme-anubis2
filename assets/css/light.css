@@ -16,8 +16,8 @@ html[data-theme='light'] {
     --nav-link-color: #696969;
 
     --pre-color: rgb(31, 35, 40);
-    --pre-bg-color: rgba(175, 184, 193, 0.2);
-    --pre-border-color: rgba(175, 184, 193, 0.3);
+    --pre-bg-color: #eff1f2;
+    --pre-border-color: #e1e5e9;
 
     --bq-color: #ccc;
     --hr-color: #ccc;
