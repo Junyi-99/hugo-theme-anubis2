@@ -176,7 +176,7 @@ pre,
 kbd {
     color: var(--pre-color);
     background-color: var(--pre-bg-color);
-    font-family: 'Courier New', 'Consolas', monospace;
+    font-family: 'Menlo', 'Courier New', 'Consolas', monospace;
     font-size: 0.90em;
     line-height: 154%;
     border-radius: 6px;
