@@ -15,3 +15,24 @@ social_icons:
   twitter: https://twitter.com/%s
   vk: https://vk.com/%s
   youtube: https://www.youtube.com/c/%s
+  4chan:
+  # docs:
+  gitlab:
+  leetcode: https://leetcode.com/%s
+  medium:
+  netease-music:
+  notion:
+  qq:
+  # rss:
+  skype:
+  slack:
+  steam:
+  teams:
+  # theme-dark:
+  # theme-light:
+  tiktok:
+  tinder:
+  tumblr:
+  weibo:
+  x: https://twitter.com/%s
+  zhihu: https://www.zhihu.com/people/%s

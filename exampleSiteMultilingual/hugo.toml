@@ -37,7 +37,7 @@ GiscusCategory = "General"
 GiscusCategoryId = "DIC_kwDOLEp76c4CcbPS"
 GiscusLazyLoad = false
 GiscusDataMapping = "pathname"
-  
+
 [[params.social]]
 id = "docs"
 url = "https://gohugo.io/documentation/"
@@ -45,6 +45,135 @@ url = "https://gohugo.io/documentation/"
 [[params.social]]
 id = "github"
 url = "https://github.com/Junyi-99/hugo-theme-anubis2"
+
+[[params.social]]
+id = "linkedin"
+url = "https://www.linkedin.com/"
+
+[[params.social]]
+id = "email"
+url = "example@example.com"
+
+[[params.social]]
+id = "4chan"
+url = "#"
+
+[[params.social]]
+id = "facebook"
+url = "#"
+
+[[params.social]]
+id = "gitlab"
+url = "#"
+
+[[params.social]]
+id = "instagram"
+url = "#"
+
+[[params.social]]
+id = "leetcode"
+url = "#"
+
+[[params.social]]
+id = "mastodon"
+url = "#"
+
+[[params.social]]
+id = "medium"
+url = "#"
+
+[[params.social]]
+id = "netease-music"
+url = "#"
+
+[[params.social]]
+id = "notion"
+url = "#"
+
+[[params.social]]
+id = "patreon"
+url = "#"
+
+[[params.social]]
+id = "qq"
+url = "#"
+
+[[params.social]]
+id = "reddit"
+url = "#"
+
+[[params.social]]
+id = "skype"
+url = "#"
+
+[[params.social]]
+id = "slack"
+url = "#"
+
+[[params.social]]
+id = "snapchat"
+url = "#"
+
+[[params.social]]
+id = "soundcloud"
+url = "#"
+
+[[params.social]]
+id = "spotify"
+url = "#"
+
+[[params.social]]
+id = "steam"
+url = "#"
+
+[[params.social]]
+id = "teams"
+url = "#"
+
+[[params.social]]
+id = "telegram"
+url = "#"
+
+[[params.social]]
+id = "tiktok"
+url = "#"
+
+[[params.social]]
+id = "tinder"
+url = "#"
+
+[[params.social]]
+id = "tumblr"
+url = "#"
+
+[[params.social]]
+id = "twitch"
+url = "#"
+
+[[params.social]]
+id = "twitter"
+url = "#"
+
+[[params.social]]
+id = "vk"
+url = "#"
+
+[[params.social]]
+id = "weibo"
+url = "#"
+
+[[params.social]]
+id = "x"
+url = "#"
+
+[[params.social]]
+id = "youtube"
+url = "#"
+
+[[params.social]]
+id = "zhihu"
+url = "#"
+
 
 [languages.en]
 languageName = "English"
@@ -144,10 +273,9 @@ unsafe = true
 
 
 [params.UmamiAnalytics]
-  enabled = true
-  dnt = false
-  id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973" # Website ID
-  datacache = false
-  url = "https://eu.umami.is/script.js"
-  shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
-  
+enabled = true
+dnt = false
+id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                            # Website ID
+datacache = false
+url = "https://eu.umami.is/script.js"
+shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
