@@ -1,4 +1,5 @@
-html[data-theme='light'] {
+@media (prefers-color-scheme: light) {
+  html {
     --font-color: #1e1e1e;
     --bg-color: #ffffff;
 
@@ -7,7 +8,7 @@ html[data-theme='light'] {
 
     --link-color: #1d60a3;
     --link-state-color: rgb(163, 29, 29);
-    --link-state-border-color: rgba(163, 29, 29, .5);
+    --link-state-border-color: rgba(163, 29, 29, 0.5);
 
     --thead-bg-color: lightgrey;
     --table-border-color: lightgrey;
@@ -33,4 +34,41 @@ html[data-theme='light'] {
 
     --svg-color: #333;
     --svg-state-color: #a31d1d;
+  }
+}
+html[data-theme="light"] {
+  --font-color: #1e1e1e;
+  --bg-color: #ffffff;
+
+  --card-color: #fafafa;
+  --card-border-color: #eeeeee;
+
+  --link-color: #1d60a3;
+  --link-state-color: rgb(163, 29, 29);
+  --link-state-border-color: rgba(163, 29, 29, 0.5);
+
+  --thead-bg-color: lightgrey;
+  --table-border-color: lightgrey;
+
+  --nav-bg-color: #fafafa;
+  --nav-link-color: #696969;
+
+  --pre-color: rgb(31, 35, 40);
+  --pre-bg-color: #eff1f2;
+  --pre-border-color: #e1e5e9;
+
+  --bq-color: #ccc;
+  --hr-color: #ccc;
+
+  --pagination-bg-color: #fafafa;
+  --pagination-link-color: #696969;
+  --pagination-border-color: #eeeeee;
+  --pagination-border-radius: 5px;
+
+  --post-info-color: grey;
+
+  --switcher-color: #333;
+
+  --svg-color: #333;
+  --svg-state-color: #a31d1d;
 }
