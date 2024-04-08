@@ -55,15 +55,7 @@ id = "email"
 url = "example@example.com"
 
 [[params.social]]
-id = "4chan"
-url = "#"
-
-[[params.social]]
 id = "facebook"
-url = "#"
-
-[[params.social]]
-id = "gitlab"
 url = "#"
 
 [[params.social]]
@@ -71,95 +63,11 @@ id = "instagram"
 url = "#"
 
 [[params.social]]
-id = "leetcode"
-url = "#"
-
-[[params.social]]
-id = "mastodon"
-url = "#"
-
-[[params.social]]
-id = "medium"
-url = "#"
-
-[[params.social]]
 id = "netease-music"
 url = "#"
 
 [[params.social]]
-id = "notion"
-url = "#"
-
-[[params.social]]
-id = "patreon"
-url = "#"
-
-[[params.social]]
-id = "qq"
-url = "#"
-
-[[params.social]]
-id = "reddit"
-url = "#"
-
-[[params.social]]
-id = "skype"
-url = "#"
-
-[[params.social]]
-id = "slack"
-url = "#"
-
-[[params.social]]
-id = "snapchat"
-url = "#"
-
-[[params.social]]
-id = "soundcloud"
-url = "#"
-
-[[params.social]]
-id = "spotify"
-url = "#"
-
-[[params.social]]
-id = "steam"
-url = "#"
-
-[[params.social]]
-id = "teams"
-url = "#"
-
-[[params.social]]
 id = "telegram"
-url = "#"
-
-[[params.social]]
-id = "tiktok"
-url = "#"
-
-[[params.social]]
-id = "tinder"
-url = "#"
-
-[[params.social]]
-id = "tumblr"
-url = "#"
-
-[[params.social]]
-id = "twitch"
-url = "#"
-
-[[params.social]]
-id = "twitter"
-url = "#"
-
-[[params.social]]
-id = "vk"
-url = "#"
-
-[[params.social]]
-id = "weibo"
 url = "#"
 
 [[params.social]]
@@ -169,11 +77,6 @@ url = "#"
 [[params.social]]
 id = "youtube"
 url = "#"
-
-[[params.social]]
-id = "zhihu"
-url = "#"
-
 
 [languages.en]
 languageName = "English"
