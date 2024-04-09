@@ -1,0 +1,17 @@
+@import 'foundation/code';
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: yellow;
+$background-color: pink;
+
+junyi {
+    font: 100% $font-stack;
+    color: $primary-color;
+    background-color: $background-color;
+}
+
+body .container {
+    max-width: none;
+    padding-left: 5em;
+    padding-right: 5em;
+}
