@@ -16,7 +16,7 @@
 {{ end }}
 
 {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{ end -}}
 
 {{ partial "favicons.html" . }}
@@ -56,8 +56,6 @@
 
 
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
-
-
 {{ range site.Params.customCSS }}
     {{ with resources.Get . | toCSS $opts | minify | fingerprint }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">

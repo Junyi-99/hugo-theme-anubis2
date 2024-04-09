@@ -27,7 +27,7 @@
 {{ if .Site.Params.rssAsSocialIcon }}
     {{ with .Site.Home.OutputFormats.Get "rss" -}}
         <li>
-            <a {{ printf "href=%q" .Permalink | safeHTMLAttr }} title="RSS" rel="me">
+            <a {{ printf "href=%q" .RelPermalink | safeHTMLAttr }} title="RSS" rel="me">
             {{ partial "font-awesome.html" (dict "iconName" "rss" "custom" false) }}
             </a>
         </li>
