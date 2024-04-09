@@ -19,6 +19,7 @@
         --pre-color: #f8f8f2;
         --pre-bg-color: #292b2d;
         --pre-border-color: rgba(175, 184, 193, 0.3);
+        --kbd-bg-color: #404347;
 
         --bq-color: #ccc;
         --hr-color: #333;
@@ -57,6 +58,7 @@ html[data-theme='dark'] {
     --pre-color: #f8f8f2;
     --pre-bg-color: #292b2d;
     --pre-border-color: rgba(175, 184, 193, 0.3);
+    --kbd-bg-color: #404347;
 
     --bq-color: #ccc;
     --hr-color: #333;
