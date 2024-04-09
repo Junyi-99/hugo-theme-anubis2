@@ -23,11 +23,20 @@
         let currentTheme
         let switchButton
         let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
-
+        
+        function switchTheme(e) {
+            currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+            if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            changeGiscusTheme(currentTheme);
+            document.body.dispatchEvent(new CustomEvent(currentTheme + "-theme-set"));
+        }
+        
         const autoChangeScheme = e => {
             currentTheme = e.matches ? 'dark' : 'light'
             document.documentElement.setAttribute('data-theme', currentTheme);
             changeGiscusTheme(currentTheme);
+            document.body.dispatchEvent(new CustomEvent(currentTheme + "-theme-set"));
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -56,13 +65,6 @@
                 return defaultTheme
             }
             return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-
-        function switchTheme(e) {
-            currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
-            if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            changeGiscusTheme(currentTheme);
         }
 
         function showContent() {
