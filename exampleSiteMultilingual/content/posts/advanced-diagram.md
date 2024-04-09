@@ -23,7 +23,7 @@ gantt
 
 ```
 
-Get more examples at [here](https://mermaid.js.org/intro/)
+Get more examples at [About Mermaid](https://mermaid.js.org/intro/)
 
 <!--more-->
 
