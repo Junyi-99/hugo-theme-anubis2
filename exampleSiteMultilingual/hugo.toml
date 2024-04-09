@@ -1,12 +1,11 @@
 baseURL = "/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Anubis2"
+title = "Anubis2 Demo Site"
 theme = "anubis2"
 paginate = 5
 
 disqusShortname = ""
-
 
 [author]
 name = "Junyi"
@@ -38,7 +37,7 @@ GiscusCategoryId = "DIC_kwDOLEp76c4CcbPS"
 GiscusLazyLoad = false
 GiscusDataMapping = "pathname"
 
-customCSS = ["css/custom1.scss", "css/custom2.css"]
+customCSS = ["custom-css/custom1.scss", "custom-css/custom2.css"]
 
 social = [
     { id = "docs", url = "https://gohugo.io/documentation/" },
