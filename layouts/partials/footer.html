@@ -13,7 +13,7 @@
             {{ end }}
             </ul>
         {{ end }}
-        
+
         <div style="display: flex; align-items: center; gap:8px">
             © {{ if isset .Site.Params "author"}}{{ .Site.Params.author }}, {{end}}{{ now.Year }}
             {{ if .Site.Params.UmamiAnalytics.shareUrl }}
@@ -23,7 +23,7 @@
         <div>
             {{ i18n "powered" }} <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a>, {{ i18n "theme" }} <a target="_blank" rel="noopener noreferrer" href="https://github.com/Junyi-99/hugo-theme-anubis2">Anubis2</a>.<br>
             {{ partial "footer-extra.html" . }}
-        </div> 
+        </div>
     </div>
 
     {{ partial "h-card.html" . }}

@@ -1,7 +1,7 @@
-{{ $toc := and ($.Site.Params.toc) (ge .WordCount $.Site.Params.tocWordCount) }} 
-{{ if isset .Params "toc" }} 
+{{ $toc := and ($.Site.Params.toc) (ge .WordCount $.Site.Params.tocWordCount) }}
+{{ if isset .Params "toc" }}
   {{ $toc = .Params.toc }}
-{{ end }} 
+{{ end }}
 
 
 {{ if $toc }}

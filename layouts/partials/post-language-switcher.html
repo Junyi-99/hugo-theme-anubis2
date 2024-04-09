@@ -9,7 +9,7 @@
                     </li>
                 {{ else }}
                     <li>
-                        <a href="{{ .Permalink }}">{{ upper .Lang }}</a>
+                        <a href="{{ .RelPermalink }}">{{ upper .Lang }}</a>
                     </li>
                 {{ end }}
             {{ end }}

@@ -30,7 +30,7 @@ interface User {
   lastName: string
   role: string
 }
- 
+
 function updateUser(id: number, update: Partial<User>) {
   const user = getUser(id)
   const newUser = { ...user, ...update }
