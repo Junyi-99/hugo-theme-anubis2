@@ -25,7 +25,7 @@ readNextPosts = 2
 copyCodeButton = true
 rssAsSocialIcon = true
 locale = "en-us"
-mathjax = true
+math = false # true: enable mathjax globally (default is false)
 toc = true
 
 # Graphcomment support
