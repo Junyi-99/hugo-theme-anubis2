@@ -40,48 +40,18 @@ GiscusDataMapping = "pathname"
 
 customCSS = ["css/custom1.scss", "css/custom2.css"]
 
-[[params.social]]
-id = "docs"
-url = "https://gohugo.io/documentation/"
-
-[[params.social]]
-id = "github"
-url = "https://github.com/Junyi-99/hugo-theme-anubis2"
-
-[[params.social]]
-id = "linkedin"
-url = "https://www.linkedin.com/"
-
-[[params.social]]
-id = "email"
-url = "example@example.com"
-
-[[params.social]]
-id = "facebook"
-url = "#"
-
-[[params.social]]
-id = "instagram"
-url = "#"
-
-[[params.social]]
-id = "netease-music"
-url = "#"
-
-[[params.social]]
-id = "telegram"
-url = "#"
-
-[[params.social]]
-id = "x"
-url = "#"
-
-[[params.social]]
-id = "youtube"
-url = "#"
-
-[languages.en]
-languageName = "English"
+social = [
+    { id = "docs", url = "https://gohugo.io/documentation/" },
+    { id = "github", url = "https://github.com/Junyi-99/hugo-theme-anubis2" },
+    { id = "linkedin", url = "https://www.linkedin.com/" },
+    { id = "email", url = "example@example.com" },
+    { id = "facebook", url = "#" },
+    { id = "instagram", url = "#" },
+    { id = "netease-music", url = "#" },
+    { id = "telegram", url = "#" },
+    { id = "x", url = "#" },
+    { id = "youtube", url = "#" }
+]
 
 [[menu.main]]
 identifier = "home"
@@ -107,9 +77,12 @@ identifier = "archive"
 url = "/posts/"
 weight = 4
 
+[languages]
+[languages.en]
+languageName = "English"
+
 [languages.pl]
 languageName = "Polski"
-
 
 [[languages.pl.menu.main]]
 identifier = "home"
@@ -176,7 +149,6 @@ author = "authors"
 [markup.goldmark.renderer]
 unsafe = true
 
-
 [params.UmamiAnalytics]
 enabled = true
 dnt = false
@@ -184,3 +156,37 @@ id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                     
 datacache = false
 url = "https://eu.umami.is/script.js"
 shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
+
+
+# Experimental features
+[params.analytics]
+    [params.analytics.umami]
+        enabled = true
+        dnt = false
+        id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                            # Website ID
+        datacache = false
+        url = "https://eu.umami.is/script.js"
+        shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
+
+    [params.analytics.google]
+        enabled = false
+
+[params.comments]
+    [params.comments.giscus]
+        enabled = true
+        repo = "Junyi-99/hugo-theme-anubis2"
+        repoId = "R_kgDOLEp76Q"
+        category = "General"
+        categoryId = "DIC_kwDOLEp76c4CcbPS"
+        lazyload = false
+        datamapping = "pathname"
+    [params.comments.disqus]
+        enabled = false
+        shortname = ""
+    [params.comments.utterances]
+        enabled = false
+        repo = "Junyi-99/hugo-theme-anubis2"
+    [params.comments.isso]
+        enabled = false
+    [params.comments.graphcommentId]
+        enabled = false
