@@ -1,4 +1,4 @@
-baseURL = "https://hugo-theme-anubis2.netlify.app/"
+baseURL = "/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Anubis2"
