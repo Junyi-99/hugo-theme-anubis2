@@ -3,7 +3,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Anubis2"
 theme = "anubis2"
-paginate = 3
+paginate = 5
 
 disqusShortname = ""
 
@@ -25,7 +25,7 @@ readNextPosts = 2
 copyCodeButton = true
 rssAsSocialIcon = true
 locale = "en-us"
-mathjax = false
+mathjax = true
 toc = true
 
 # Graphcomment support
