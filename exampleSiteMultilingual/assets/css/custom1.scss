@@ -1,17 +1,14 @@
 @import 'foundation/code';
 
 $font-stack: Helvetica, sans-serif;
-$primary-color: yellow;
-$background-color: pink;
+$primary-color: rgb(255, 255, 168);
+$background-color: rgb(85, 85, 85);
 
 junyi {
+    display: block;
     font: 100% $font-stack;
     color: $primary-color;
     background-color: $background-color;
+    margin-top: 1em;
 }
 
-body .container {
-    max-width: none;
-    padding-left: 5em;
-    padding-right: 5em;
-}

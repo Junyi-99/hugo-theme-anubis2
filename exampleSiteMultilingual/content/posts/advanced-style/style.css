@@ -1,0 +1,8 @@
+@import 'subfolder/hello.scss';
+
+.container {
+    max-width: none;
+    padding-left: 5em;
+    padding-right: 5em;
+    background-color: white;
+}
