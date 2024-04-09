@@ -26,10 +26,23 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
 # H1
+
+You should not use `# H1` in your markdown file, since the title is `#H1`.
+
+If you use, you will get a warning from linter:
+
+```txt
+MD025/single-title/single-h1: Multiple top-level headings in the same document
+```
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 
 ## Paragraph
@@ -42,16 +55,16 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-#### Blockquote without attribution
+### Blockquote without attribution
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+>
 > **Note** that you can use *Markdown syntax* within a blockquote.
 
 #### Blockquote with attribution
 
 > Don't communicate by sharing memory, share memory by communicating.</p>
 > — <cite>Rob Pike[^1]</cite>
-
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
@@ -61,18 +74,18 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
    Name | Age
 --------|------
-    Bob | 27
+  Bob   | 27
   Alice | 23
 
-#### Inline Markdown within tables
+### Inline Markdown within tables
 
-| Inline&nbsp;&nbsp;&nbsp;     | Markdown&nbsp;&nbsp;&nbsp;  | In&nbsp;&nbsp;&nbsp;                | Table      |
-| ---------- | --------- | ----------------- | ---------- |
-| *italics*  | **bold**  | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code`     |
+ Inline     | Markdown  | In                | Table
+---------- | --------- | ----------------- | ----------
+*italics*  | **bold**  | ~~strikethrough~~ | `code`
 
 ## Code Blocks
 
-#### Code block with backticks
+### Code block with backticks
 
 ```html
 <!DOCTYPE html>
@@ -86,7 +99,8 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 </body>
 </html>
 ```
-#### Code block indented with four spaces
+
+### Code block indented with four spaces
 
     <!doctype html>
     <html lang="en">
@@ -99,7 +113,8 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
     </body>
     </html>
 
-#### Code block with Hugo's internal highlight shortcode
+### Code block with Hugo's internal highlight shortcode
+
 {{< highlight html >}}
 <!DOCTYPE html>
 <html lang="en">
@@ -115,22 +130,24 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 ## List Types
 
-#### Ordered List
+### Ordered List
 
 1. First item
 2. Second item
 3. Third item
 
-#### Unordered List
+### Unordered List
 
 * List item
 * Another item
 * And another item
 
-#### Nested list
+### Nested list
 
 * Item
+
 1. First Sub-item
+
 2. Second Sub-item
 
 ## Other Elements — abbr, sub, sup, kbd, mark
