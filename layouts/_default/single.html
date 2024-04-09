@@ -41,4 +41,15 @@
     {{ if not .Params.disableComments }}
         {{ partial "comments.html" . }}
     {{ end }}
+    
+    {{/*  When you use ```mermaid``, render-codeblock-mermaid.html is called and 
+        `.Store.Set "hasMermaid"` is executed.
+        `.Store.Get "hasMermaid"` will return true and mermaid.js will be loaded.
+    */}}
+    {{ if .Store.Get "hasMermaid" }}
+        <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    {{ end }}
 {{ end }}
