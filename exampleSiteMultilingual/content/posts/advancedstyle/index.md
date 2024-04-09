@@ -8,6 +8,10 @@ tags = [
 ]
 +++
 
+There are examples of how to use custom `global-wise style` or `page-wise style`.
+
+<!--more-->
+
 <div class="anubis-custom-style">
 The custom <code>.css</code> <code>.scss</code> <code>.sass</code> file should be placed in <code>assets/</code> folder. (instead of <code>static/</code>)
 </div>
@@ -42,21 +46,15 @@ This page is affected by <code>assets/css/custom1.scss</code> and <code>assets/c
 ```
 
 ```scss
-// assets/css/foundation/_code.scss
-code {
-  padding: .25em;
-  line-height: 2;
-  background-color: rgb(189, 204, 255);
-}
+// assets/css/foundation/_vars.scss
+$font-stack: Helvetica, sans-serif;
+$primary-color: rgb(255, 255, 168);
+$background-color: rgb(85, 85, 85);
 ```
 
 ```scss
 // assets/css/custom1.scss
-@import 'foundation/code';
-
-$font-stack: Helvetica, sans-serif;
-$primary-color: rgb(255, 255, 168);
-$background-color: rgb(85, 85, 85);
+@import 'foundation/vars';
 
 junyi {
     display: block;

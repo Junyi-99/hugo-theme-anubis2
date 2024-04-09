@@ -1,6 +1,6 @@
 +++
 author = "Hugo Authors"
-title = "Usage of code, pre, kbd"
+title = "Advanced Usage of code, pre, kbd"
 date = "2024-04-09"
 description = "Guide to advanced usage of Anubis2"
 tags = [
@@ -8,6 +8,10 @@ tags = [
 ]
 +++
 
+`code` <pre>pre</pre>
+
+<kbd>CRTL</kbd> + <kbd>K</kbd> + <kbd>B</kbd> + <kbd>D</kbd>
+<!--more-->
 
 ## \<code\>
 

@@ -1,8 +1,4 @@
-@import 'foundation/code';
-
-$font-stack: Helvetica, sans-serif;
-$primary-color: rgb(255, 255, 168);
-$background-color: rgb(85, 85, 85);
+@import 'foundation/vars';
 
 junyi {
     display: block;
@@ -11,4 +7,3 @@ junyi {
     background-color: $background-color;
     margin-top: 1em;
 }
-
