@@ -41,4 +41,37 @@
     {{ if not .Params.disableComments }}
         {{ partial "comments.html" . }}
     {{ end }}
+    
+    {{/*  When you use ```mermaid``, render-codeblock-mermaid.html is called and 
+        `.Store.Set "hasMermaid"` is executed.
+        `.Store.Get "hasMermaid"` will return true and mermaid.js will be loaded.
+    */}}
+    
+    {{ if .Store.Get "hasMermaid" }}
+        {{ partial "resource.html" (dict "context" . "type" "js" "filename" "js/load-mermaid.js") }}
+        
+        {{ $colorTheme := "light" }}
+        {{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
+            {{ $colorTheme = site.Params.colortheme | lower }}
+        {{ end }}
+
+        <script type="module">
+            function detectCurrentScheme3() {
+                    const defaultTheme = "{{ $colorTheme }}";
+                    if (localStorage !== null && localStorage.getItem("user-color-scheme")) {
+                            return localStorage.getItem("user-color-scheme");
+                    }
+                    if (defaultTheme === "dark" || defaultTheme === "light") {
+                            return defaultTheme;
+                    }
+                    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+            window.mermaid = mermaid;
+            window.initMermaid()
+            document.body.dispatchEvent(new CustomEvent(detectCurrentScheme3() + "-theme-set"));
+        </script>
+    {{ end }}
 {{ end }}
+

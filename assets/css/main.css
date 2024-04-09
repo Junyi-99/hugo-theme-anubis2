@@ -47,7 +47,7 @@ section {
 }
 
 main {
-    outline:none;
+    outline: none;
 }
 
 /* Table of Contents */
@@ -55,11 +55,12 @@ main {
 .toc {
     cursor: zoom-in;
     display: block;
-    
+
     margin-top: 1em;
     margin-bottom: 1em;
-    padding: 0.5em 1em; /* top & bottom, left & right */
-    
+    padding: 0.5em 1em;
+    /* top & bottom, left & right */
+
     border: 1px solid var(--card-border-color);
     border-radius: var(--card-border-radius);
     background: var(--card-color);
@@ -120,13 +121,13 @@ a:active {
 }
 
 a.skip-main {
-    left:-999px;
-    position:absolute;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    z-index:-999;
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
 }
 
 a.skip-main:focus,
@@ -135,8 +136,8 @@ a.skip-main:active {
     top: 0px;
     width: auto;
     height: auto;
-    overflow:auto;
-    z-index:999;
+    overflow: auto;
+    z-index: 999;
     padding: 4px 6px 4px 6px;
     text-decoration: underline;
     border: none;
@@ -157,18 +158,15 @@ table {
 }
 
 
-th, td {
+th,
+td {
     padding: 0.5em 1em;
     border: 1px double var(--table-border-color);
 }
 
-
 /* Code */
-pre {
-    max-width: 100%;
-    overflow: auto;
-    margin-top: 0;
-    margin-bottom: 0;
+mark {
+    border-radius: 4px;
 }
 
 code,
@@ -177,18 +175,49 @@ kbd {
     color: var(--pre-color);
     background-color: var(--pre-bg-color);
     font-family: 'Menlo', 'Courier New', 'Consolas', monospace;
-    font-size: 0.90em;
+    font-size: 14.4px; /* 18px * 0.6 */
     line-height: 154%;
     border-radius: 6px;
     border: 1px solid var(--pre-border-color);
-    padding: 0.1em 0.3em; /* top, bottom */
-    /* top, left, bottom, right */
+    overflow: auto;
 }
 
-pre code, pre kbd {
+/* <code> tag */
+code {
+    font-size: 14.4px; /* 18px * 0.6 */
+    padding: 0.1em 0.3em;
+}
+
+pre {
+    padding: 0.3em;
+}
+
+/* <kbd> inside <p> */
+/* <kbd> inside <pre> */
+/* p kbd,
+pre kbd {
+    background-color: transparent;
+    border: none;
+} */
+p kbd,
+pre kbd,
+p kbd kbd,
+pre kbd kbd {
+    font-size: 14.4px; /* 18px * 0.6 */
+    background-color: var(--kbd-bg-color);
+    border: 1px solid var(--pre-border-color);
+    border-width: 1px 2px 2px 1px;
+    padding: 0.1em 0.3em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+/* ```python``` like */
+pre code {
     color: inherit;
     background-color: inherit;
     border: none;
+    padding: 0em;
 }
 
 /* Styles */
@@ -256,7 +285,7 @@ header h2 {
     font-weight: 700;
 }
 
-header nav:not(:empty){
+header nav:not(:empty) {
     background: var(--nav-bg-color);
     margin-top: var(--card-margin);
     max-width: 100%;
@@ -600,10 +629,10 @@ article figcaption {
 }
 
 article video {
-  max-width: 100%;
-  display: block;
-  height: auto;
-  margin: 0 auto .5em;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto .5em;
 }
 
 code.has-jax {
@@ -631,7 +660,7 @@ code.has-jax {
     display: block;
 }
 
-.post-summary > p {
+.post-summary>p {
     display: block;
 }
 
@@ -643,34 +672,34 @@ code.has-jax {
     font-size: 14px;
 }
 
-.post-translations > li {
+.post-translations>li {
     display: inline;
 }
 
-.post-translations > li:not(:last-child)::after {
+.post-translations>li:not(:last-child)::after {
     content: "|";
     display: inline-block;
 }
 
-.post-translations > li a {
+.post-translations>li a {
     color: var(--link-color);
 }
 
-.post-translations > li a:hover,
-.post-translations > li a:focus {
+.post-translations>li a:hover,
+.post-translations>li a:focus {
     color: var(--link-state-color);
 }
 
 .read-next-title {
-    margin-bottom:  0;
+    margin-bottom: 0;
     margin-top: 3em;
     padding-top: 1em;
     border-top: 1px dashed var(--thead-bg-color);
 }
 
 .read-next-posts {
-    margin-top:  5px;
-    list-style-type:"- ";
+    margin-top: 5px;
+    list-style-type: "- ";
     padding-inline-start: 20px;
 }
 
@@ -710,7 +739,8 @@ code.has-jax {
     visibility: hidden;
 }
 
-.pagination-item a:hover, .pagination-item a:focus {
+.pagination-item a:hover,
+.pagination-item a:focus {
     border-bottom: 0;
 }
 
@@ -738,13 +768,15 @@ code.has-jax {
     justify-content: space-between;
 }
 
-ul.language-select, ul.footer-menu {
+ul.language-select,
+ul.footer-menu {
     padding-left: 0;
     list-style: none;
     display: flex;
 }
 
-ul.language-select > li, ul.footer-menu > li {
+ul.language-select>li,
+ul.footer-menu>li {
     margin-right: 1em;
 }
 
@@ -764,6 +796,7 @@ ul.language-select > li, ul.footer-menu > li {
     position: relative;
     overflow: auto;
 }
+
 .highlight pre {
     padding-right: 75px;
 }
@@ -787,8 +820,8 @@ ul.language-select > li, ul.footer-menu > li {
     background-color: #777;
     min-width: 25px;
     text-align: center;
-    border-radius: 5px;
 }
+
 .highlight-copy-btn:hover {
     transition-duration: .1s;
     background-color: #666;
@@ -804,12 +837,18 @@ ul.language-select > li, ul.footer-menu > li {
 
 /* Others */
 .noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
 }
 
@@ -851,17 +890,47 @@ ul.language-select > li, ul.footer-menu > li {
     }
 }
 
-{{ range site.Params.customCSS }}
-    {{ $custom := resources.Get . }}
-    {{ $custom.Content }}
-{{ end }}
+    {
+        {
+        range site.Params.customCSS
+    }
+}
 
-{{ if site.Params.isso.enabled }}
-  #isso-thread .textarea {
+    {
+        {
+        $custom : =resources.Get .
+    }
+}
+
+    {
+        {
+        $custom.Content
+    }
+}
+
+    {
+        {
+        end
+    }
+}
+
+    {
+        {
+        if site.Params.isso.enabled
+    }
+}
+
+#isso-thread .textarea {
     color: #000;
-  }
-  #isso-thread .isso-feedlink {
+}
+
+#isso-thread .isso-feedlink {
     position: relative;
     z-index: 1;
-  }
-{{ end }}
+}
+
+    {
+        {
+        end
+    }
+}
