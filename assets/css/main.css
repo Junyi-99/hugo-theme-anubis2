@@ -679,6 +679,8 @@ code.has-jax {
 .post-translations>li:not(:last-child)::after {
     content: "|";
     display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .post-translations>li a {
