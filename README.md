@@ -16,6 +16,7 @@ Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo
 - Analytics (Google, Umami)
 - RSS feeds
 - Mobile Support
+- [Full Features](wiki/Full-Features)
 
 ## Installation
 
