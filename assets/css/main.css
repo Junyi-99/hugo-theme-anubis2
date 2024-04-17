@@ -890,35 +890,13 @@ ul.footer-menu>li {
     }
 }
 
-    {
-        {
-        range site.Params.customCSS
-    }
-}
+{{ range site.Params.customCSS }}
+    {{ $custom := resources.Get . }}
 
-    {
-        {
-        $custom : =resources.Get .
-    }
-}
+    {{ $custom.Content }}
+{{ end }}
 
-    {
-        {
-        $custom.Content
-    }
-}
-
-    {
-        {
-        end
-    }
-}
-
-    {
-        {
-        if site.Params.isso.enabled
-    }
-}
+{{ if site.Params.isso.enabled }}
 
 #isso-thread .textarea {
     color: #000;
@@ -929,8 +907,4 @@ ul.footer-menu>li {
     z-index: 1;
 }
 
-    {
-        {
-        end
-    }
-}
+{{ end }}
