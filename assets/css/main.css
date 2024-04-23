@@ -855,7 +855,7 @@ ul.footer-menu>li {
 /* Copy code  */
 .highlight {
     position: relative;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .highlight:hover .highlight-copy-btn {
@@ -864,11 +864,11 @@ ul.footer-menu>li {
 }
 
 .highlight-copy-btn {
-    display: none;
+    /* display: none; */
     position: absolute;
     top: 0px;
     right: 0px;
-    border: 0;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     padding: 1px;
     font-size: 0.7em;
@@ -878,6 +878,7 @@ ul.footer-menu>li {
     min-width: 22px;
     text-align: center;
     transition: border 0.3s;
+    transition: background-color 0.3s;
 }
 
 .highlight-copy-btn:hover {
