@@ -1,6 +1,6 @@
 +++
 author = "Junyi"
-title = "Icons"
+title = "Demo - Social Icons"
 date = "2024-04-23"
 description = "Guide to using social icons supported by Anubis2."
 tags = [
@@ -11,6 +11,8 @@ tags = [
 +++
 
 To use an icon, simply copy its shortcode and paste it into your content where you want the icon to appear. The shortcode must be enclosed in `{{</*   */>}}`.
+
+<!--more-->
 
 Here is a list of available icons, their shortcodes, and what they look like when rendered:
 

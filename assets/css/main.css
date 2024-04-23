@@ -864,7 +864,7 @@ ul.footer-menu>li {
 }
 
 .highlight-copy-btn {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 0px;
     right: 0px;

@@ -145,8 +145,18 @@ category = "categories"
 tag = "tags"
 author = "authors"
 
+[markup]
+defaultMarkdownHandler = 'goldmark'
+
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup.highlight]
+anchorLineNos      = false
+codeFences         = true # tested with true and false. Both work.
+noClasses          = true # If you run with markup.highlight.noClasses=false in your site configuration, you need a style sheet.
+style              = 'base16-snazzy'
+tabWidth           = 4
 
 [params.UmamiAnalytics]
 enabled = true
