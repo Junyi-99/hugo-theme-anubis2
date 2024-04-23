@@ -215,7 +215,7 @@ p code,
 p kbd {
     padding: 0.1em 0.3em;
     /* top, bottom */
-    margin-right: 4px;
+    /* margin-right: 4px; */
 }
 
 td pre {
@@ -860,14 +860,14 @@ ul.footer-menu>li {
 
 .highlight:hover .highlight-copy-btn {
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .highlight-copy-btn {
     display: none;
     position: absolute;
-    top: 18px;
-    right: 2px;
+    top: 0px;
+    right: 0px;
     border: 0;
     border-radius: 6px;
     padding: 1px;
@@ -875,7 +875,7 @@ ul.footer-menu>li {
     line-height: 1.8;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
-    min-width: 25px;
+    min-width: 22px;
     text-align: center;
     transition: border 0.3s;
 }
