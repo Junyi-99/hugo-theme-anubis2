@@ -179,7 +179,6 @@ kbd {
     line-height: 154%;
     border-radius: 6px;
     border: 1px solid var(--pre-border-color);
-    overflow: auto;
 }
 
 /* <code> tag */
@@ -212,8 +211,67 @@ pre kbd kbd {
     margin-right: 0.2em;
 }
 
-/* ```python``` like */
-pre code {
+p code,
+p kbd {
+    padding: 0.1em 0.3em;
+    /* top, bottom */
+    margin-right: 4px;
+}
+
+td pre {
+    border: none;
+    /* padding: 0px; */
+    border-radius: 0px;
+}
+
+td:first-child pre {
+    padding-right: 0;
+}
+
+td:last-child pre {
+    padding-left: 0;
+}
+
+td pre code {
+    /* when there is a line number grid */
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    /* padding-top: 4px; */
+    /* padding-bottom: 4px; */
+}
+
+div.highlight {
+    border-radius: 6px;
+    border: 1px solid var(--pre-border-color);
+    margin-bottom: 14px;
+}
+
+div.highlight pre {
+    border: none;
+    display: grid;
+    margin: 0px;
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+}
+
+div.highlight code {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.highlight code a:hover,
+div.highlight code a:focus {
+    color: white;
+    border-bottom: 1px solid white;
+    /*for markup.highlight.anchorLineNos = true*/
+}
+
+pre code,
+pre kbd {
     color: inherit;
     background-color: inherit;
     border: none;
@@ -797,10 +855,6 @@ ul.footer-menu>li {
 .highlight {
     position: relative;
     overflow: auto;
-}
-
-.highlight pre {
-    padding-right: 75px;
 }
 
 .highlight:hover .highlight-copy-btn {
