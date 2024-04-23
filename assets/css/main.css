@@ -252,6 +252,7 @@ div.highlight pre {
     border: none;
     display: grid;
     margin: 0px;
+    overflow: auto; /* Have to add this line, otherwise the "pre" and "code" will have different width */
     /* padding-left: 10px; */
     /* padding-right: 10px; */
     /* padding-top: 10px; */
