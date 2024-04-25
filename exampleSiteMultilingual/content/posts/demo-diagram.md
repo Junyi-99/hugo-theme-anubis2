@@ -1,12 +1,14 @@
 +++
 author = "Hugo Authors"
-title = "Advanced Usage of Diagrams"
-date = "2024-04-09"
+title = "Demo - Support for Diagrams"
+date = "2024-04-19"
 description = "Guide to advanced usage of Anubis2"
 tags = [
     "emoji",
 ]
 +++
+
+Feel free to switch between the light and dark themes to see how the diagram adapts its colors accordingly.
 
 ## Mermaid Diagrams
 

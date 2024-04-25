@@ -1,6 +1,6 @@
 +++
 author = "Junyi"
-title = "Demo - Codes"
+title = "Demo - Multiline Codes"
 date = "2024-04-23"
 description = "Codes, Codefences, and Syntax Highlighting."
 tags = [
@@ -9,6 +9,8 @@ tags = [
     "hugo"
 ]
 +++
+
+<!-- without <!--more-->, the preview should be a good rendering of the content, instead of a "source code" version. -->
 
 ## Line Numbers, Highlight Lines
 
