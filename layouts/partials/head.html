@@ -22,14 +22,16 @@
 {{ partial "favicons.html" . }}
 
 {{ $colorTheme := "light" }}
-{{ $colorThemeSwitcher := false }}
+{{ $colorThemeSwitcher := true }}
 
 {{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
     {{ $colorTheme = site.Params.colortheme | lower }}
 {{ end }}
 
-{{ if and (isset site.Params "colorthemeswitcher") }}
+{{ if isset site.Params "colorthemeswitcher" }}
     {{ $colorThemeSwitcher = site.Params.colorthemeswitcher }}
+{{ else }}
+    {{ $colorThemeSwitcher = true }}
 {{ end }}
 
 {{ if or (eq $colorThemeSwitcher true) (eq $colorTheme "auto") }}
