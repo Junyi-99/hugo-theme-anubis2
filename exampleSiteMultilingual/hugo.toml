@@ -9,9 +9,10 @@ disqusShortname = ""
 
 [author]
 name = "Junyi"
+email  = "me@junyi.dev"
+location = "Singapore"
 
 [params]
-author = "Junyi"
 description = "Anubis2 is another simple minimalist theme for Hugo blog engine."
 dateFormat = "2006-01-02"
 paginationSinglePost = true
