@@ -1,6 +1,8 @@
 {{ $toc := and ($.Site.Params.toc) (ge .WordCount $.Site.Params.tocWordCount) }}
 {{ if isset .Params "toc" }}
   {{ $toc = .Params.toc }}
+{{ else }}
+  {{ $toc = true }}
 {{ end }}
 
 
