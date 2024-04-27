@@ -10,7 +10,9 @@ tags = [
 ]
 +++
 
-<!-- without <!--more-->, the preview should be a good rendering of the content, instead of a "source code" version. -->
+There are 9 tests.
+
+<!--more-->
 
 ## Line Numbers, Highlight Lines
 
