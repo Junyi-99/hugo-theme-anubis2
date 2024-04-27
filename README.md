@@ -30,6 +30,30 @@ Inside the folder of your Hugo site run:
 
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
+### Configure your site
+
+Don't be panic, configure Anubis2 is relatively simple.
+
+**This is the minimum configuration:**
+
+```toml
+baseURL = "https://hugo-theme-anubis2.netlify.app/"
+languageCode = "en-us"
+theme = "anubis2"
+title = "Anubis2 Demo Site"
+
+[author]
+name = "Junyi"
+
+[markup.goldmark.renderer]
+unsafe = true # true | false; Enable unsafe mode to have a better experience
+
+[markup.highlight]
+style = 'base16-snazzy' # Highlight.js style
+```
+
+It's not too late to keep the other fields as defaults and fine-tune them when you have time! (see [Configuration Example](https://github.com/Junyi-99/hugo-theme-anubis2/wiki/Configuration-Example))
+
 ### Run your site
 
 In order to see your site in action, run Hugo's built-in local server.
