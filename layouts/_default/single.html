@@ -1,11 +1,11 @@
 {{ define "main" }}
-    {{ if .Menus }}
+    {{/*  {{ if .Menus }}
         <nav class="post-navigation">
         {{ range .Menus }}
             <a href="{{ .ConfiguredURL | absLangURL }}" title="{{ .Title }}">{{ .Name | markdownify }}</a>
         {{ end }}
         </nav>
-    {{ end }}
+    {{ end }}  */}}
 
     <article class="post h-entry">
         <div class="post-header">
@@ -21,9 +21,14 @@
         </div>
 
     </article>
-    
-    {{ if gt .Site.Params.readNextPosts 0 }}
-        {{ $related := .Site.RegularPages.Related . | first .Site.Params.readNextPosts }}
+
+    {{ $readNextPosts := 3}}
+    {{ if isset .Site.Params "readNextPosts" }}
+        {{ $readNextPosts := .Site.Params.readNextPosts }}
+    {{ end }}
+
+    {{ if gt $readNextPosts 0 }}
+        {{ $related := .Site.RegularPages.Related . | first $readNextPosts }}
         {{ with $related }}
             <h3 class="read-next-title noselect">{{ i18n "readNext" }}</h3>
             <ul class="read-next-posts noselect">
@@ -41,15 +46,15 @@
     {{ if not .Params.disableComments }}
         {{ partial "comments.html" . }}
     {{ end }}
-    
-    {{/*  When you use ```mermaid``, render-codeblock-mermaid.html is called and 
+
+    {{/*  When you use ```mermaid``, render-codeblock-mermaid.html is called and
         `.Store.Set "hasMermaid"` is executed.
         `.Store.Get "hasMermaid"` will return true and mermaid.js will be loaded.
     */}}
-    
+
     {{ if .Store.Get "hasMermaid" }}
         {{ partial "resource.html" (dict "context" . "type" "js" "filename" "js/load-mermaid.js") }}
-        
+
         {{ $colorTheme := "light" }}
         {{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
             {{ $colorTheme = site.Params.colortheme | lower }}
@@ -66,7 +71,7 @@
                     }
                     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
             }
-            
+
             import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
             window.mermaid = mermaid;
             window.initMermaid()
@@ -74,4 +79,3 @@
         </script>
     {{ end }}
 {{ end }}
-

@@ -16,20 +16,22 @@
 {{ end }}
 
 {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{ end -}}
 
 {{ partial "favicons.html" . }}
 
 {{ $colorTheme := "light" }}
-{{ $colorThemeSwitcher := false }}
+{{ $colorThemeSwitcher := true }}
 
 {{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
     {{ $colorTheme = site.Params.colortheme | lower }}
 {{ end }}
 
-{{ if and (isset site.Params "colorthemeswitcher") }}
+{{ if isset site.Params "colorthemeswitcher" }}
     {{ $colorThemeSwitcher = site.Params.colorthemeswitcher }}
+{{ else }}
+    {{ $colorThemeSwitcher = true }}
 {{ end }}
 
 {{ if or (eq $colorThemeSwitcher true) (eq $colorTheme "auto") }}
@@ -53,6 +55,27 @@
 {{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/main.css") }}
 {{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/light.css") }}
 {{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/dark.css") }}
+
+
+{{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
+{{ range site.Params.customCSS }}
+    {{ with resources.Get . | toCSS $opts | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
+{{ end }}
+
+{{ if site.Params.isso.enabled }} {{/* TODO: maybe we can remove it */}}
+  <style>
+    #isso-thread .textarea {
+      color: #000;
+    }
+    #isso-thread .isso-feedlink {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+{{ end }}
+
 
 {{ if .Site.Params.copyCodeButton | default true }}
     {{ partial "resource.html" (dict "context" . "type" "js" "filename" "js/copy-code.js") }}

@@ -7,7 +7,7 @@
 
 (function(window){
     'use strict'
-    
+
       const elementCode = '.mermaid'
       const loadMermaid = function(theme) {
         window.mermaid.initialize({theme})
@@ -26,7 +26,7 @@
               }
             });
           } catch (error) {
-           reject(error) 
+           reject(error)
           }
         })
       }
@@ -46,11 +46,11 @@
               }
             });
           } catch (error) {
-           reject(error) 
+           reject(error)
           }
         })
-      } 
-    
+      }
+
       const init = ()=>{
         saveOriginalData()
         .catch( console.error )

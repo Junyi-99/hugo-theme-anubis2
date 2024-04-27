@@ -1,29 +1,33 @@
 +++
 author = "Hugo Authors"
-title = "Advanced Diagram Usage"
-date = "2024-04-09"
+title = "Demo - Support for Diagrams"
+date = "2024-04-19"
 description = "Guide to advanced usage of Anubis2"
 tags = [
     "emoji",
 ]
 +++
 
-
-## GoAT
-
-```goat
-      .               .                .               .--- 1          .-- 1     / 1
-     / \              |                |           .---+            .-+         +
-    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
-   +     +        |       |        |       |    ---+            ---+          +
-  / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
- /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
- 1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
-```
+Feel free to switch between the light and dark themes to see how the diagram adapts its colors accordingly.
 
 ## Mermaid Diagrams
 
-Get more examples at [here](https://mermaid.js.org/intro/)
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
+
+```
+
+Get more examples at [About Mermaid](https://mermaid.js.org/intro/)
+
+<!--more-->
 
 ```mermaid
 gitGraph:
@@ -41,18 +45,7 @@ gitGraph:
     commit
 ```
 
-```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat YYYY-MM-DD
-    section Section
-        A task          :a1, 2014-01-01, 30d
-        Another task    :after a1, 20d
-    section Another
-        Task in Another :2014-01-12, 12d
-        another task    :24d
 
-```
 
 ```mermaid
 stateDiagram
@@ -102,4 +95,16 @@ sequenceDiagram
     John-->>Alice: Great!
     John->>Bob: How about you?
     Bob-->>John: Jolly good!
+```
+
+## GoAT
+
+```goat
+      .               .                .               .--- 1          .-- 1     / 1
+     / \              |                |           .---+            .-+         +
+    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
+   +     +        |       |        |       |    ---+            ---+          +
+  / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
+ /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
+ 1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
 ```

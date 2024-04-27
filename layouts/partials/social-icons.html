@@ -1,4 +1,4 @@
-<ul class="social-icons">
+<ul class="social-icons noselect">
 
 {{ range $.Site.Params.Social }}
     {{ if and (isset $.Site.Data.social.social_icons .id) (isset . "url") }}
@@ -24,10 +24,15 @@
     {{ end }}
 {{ end }}
 
-{{ if .Site.Params.rssAsSocialIcon }}
+{{ $rssIcon := true }}
+{{ if isset .Site.Params "rssIcon" }}
+    {{ $rssIcon = .Site.Params.rssIcon }}
+{{ end }}
+
+{{ if $rssIcon }}
     {{ with .Site.Home.OutputFormats.Get "rss" -}}
         <li>
-            <a {{ printf "href=%q" .Permalink | safeHTMLAttr }} title="RSS" rel="me">
+            <a {{ printf "href=%q" .RelPermalink | safeHTMLAttr }} title="RSS" rel="me">
             {{ partial "font-awesome.html" (dict "iconName" "rss" "custom" false) }}
             </a>
         </li>

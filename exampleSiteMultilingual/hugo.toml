@@ -1,18 +1,18 @@
-baseURL = "https://hugo-theme-anubis2.netlify.app/"
+baseURL = "/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Anubis2"
+title = "Anubis2 Demo Site"
 theme = "anubis2"
-paginate = 3
+paginate = 5
 
 disqusShortname = ""
 
-
 [author]
 name = "Junyi"
+email  = "me@junyi.dev"
+location = "Singapore"
 
 [params]
-author = "Junyi"
 description = "Anubis2 is another simple minimalist theme for Hugo blog engine."
 dateFormat = "2006-01-02"
 paginationSinglePost = true
@@ -25,7 +25,7 @@ readNextPosts = 2
 copyCodeButton = true
 rssAsSocialIcon = true
 locale = "en-us"
-mathjax = false
+math = false # true: enable mathjax globally (default is false)
 toc = true
 
 # Graphcomment support
@@ -38,48 +38,20 @@ GiscusCategoryId = "DIC_kwDOLEp76c4CcbPS"
 GiscusLazyLoad = false
 GiscusDataMapping = "pathname"
 
-[[params.social]]
-id = "docs"
-url = "https://gohugo.io/documentation/"
+customCSS = ["custom-css/custom1.scss", "custom-css/custom2.css"]
 
-[[params.social]]
-id = "github"
-url = "https://github.com/Junyi-99/hugo-theme-anubis2"
-
-[[params.social]]
-id = "linkedin"
-url = "https://www.linkedin.com/"
-
-[[params.social]]
-id = "email"
-url = "example@example.com"
-
-[[params.social]]
-id = "facebook"
-url = "#"
-
-[[params.social]]
-id = "instagram"
-url = "#"
-
-[[params.social]]
-id = "netease-music"
-url = "#"
-
-[[params.social]]
-id = "telegram"
-url = "#"
-
-[[params.social]]
-id = "x"
-url = "#"
-
-[[params.social]]
-id = "youtube"
-url = "#"
-
-[languages.en]
-languageName = "English"
+social = [
+    { id = "docs", url = "https://gohugo.io/documentation/" },
+    { id = "github", url = "https://github.com/Junyi-99/hugo-theme-anubis2" },
+    { id = "linkedin", url = "https://www.linkedin.com/" },
+    { id = "email", url = "example@example.com" },
+    { id = "facebook", url = "#" },
+    { id = "instagram", url = "#" },
+    { id = "netease-music", url = "#" },
+    { id = "telegram", url = "#" },
+    { id = "x", url = "#" },
+    { id = "youtube", url = "#" }
+]
 
 [[menu.main]]
 identifier = "home"
@@ -105,9 +77,12 @@ identifier = "archive"
 url = "/posts/"
 weight = 4
 
+[languages]
+[languages.en]
+languageName = "English"
+
 [languages.pl]
 languageName = "Polski"
-
 
 [[languages.pl.menu.main]]
 identifier = "home"
@@ -171,9 +146,18 @@ category = "categories"
 tag = "tags"
 author = "authors"
 
+[markup]
+defaultMarkdownHandler = 'goldmark'
+
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.highlight]
+anchorLineNos      = false
+codeFences         = true # tested with true and false. Both work.
+noClasses          = true # If you run with markup.highlight.noClasses=false in your site configuration, you need a style sheet.
+style              = 'base16-snazzy'
+tabWidth           = 4
 
 [params.UmamiAnalytics]
 enabled = true
@@ -182,3 +166,37 @@ id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                     
 datacache = false
 url = "https://eu.umami.is/script.js"
 shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
+
+
+# Experimental features
+[params.analytics]
+    [params.analytics.umami]
+        enabled = true
+        dnt = false
+        id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                            # Website ID
+        datacache = false
+        url = "https://eu.umami.is/script.js"
+        shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
+
+    [params.analytics.google]
+        enabled = false
+
+[params.comments]
+    [params.comments.giscus]
+        enabled = true
+        repo = "Junyi-99/hugo-theme-anubis2"
+        repoId = "R_kgDOLEp76Q"
+        category = "General"
+        categoryId = "DIC_kwDOLEp76c4CcbPS"
+        lazyload = false
+        datamapping = "pathname"
+    [params.comments.disqus]
+        enabled = false
+        shortname = ""
+    [params.comments.utterances]
+        enabled = false
+        repo = "Junyi-99/hugo-theme-anubis2"
+    [params.comments.isso]
+        enabled = false
+    [params.comments.graphcommentId]
+        enabled = false

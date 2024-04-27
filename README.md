@@ -10,12 +10,13 @@ Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo
 ## Highlighted Features
 
 - Multilingual
-- Dark / Light mode
+- Dark / Light mode (Automatic switch based on system settings)
 - Table of Contents
 - Comment Support (Giscus, Disque, ISSO, Utterances, GraphComment)
 - Analytics (Google, Umami)
 - RSS feeds
 - Mobile Support
+- [Full Features](wiki/Full-Features)
 
 ## Installation
 

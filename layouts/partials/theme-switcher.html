@@ -1,16 +1,16 @@
 {{ $colorTheme := "light" }}
-{{ $colorThemeSwitcher := false }}
+{{ $colorThemeSwitcher := true }}
 
 {{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
     {{ $colorTheme = site.Params.colortheme | lower }}
 {{ end }}
 
-{{ if and (isset site.Params "colorthemeswitcher") }}
+{{ if isset site.Params "colorthemeswitcher" }}
     {{ $colorThemeSwitcher = site.Params.colorthemeswitcher }}
 {{ end }}
 
 {{ if or (eq $colorThemeSwitcher true) (eq $colorTheme "auto") }}
-    {{ if site.Params.colorthemeswitcher }}
+    {{ if $colorThemeSwitcher }}
         <div class="theme-switcher">
             {{ partial "font-awesome.html" (dict "iconName" "theme-light" "custom" false) }}
         </div>
@@ -23,7 +23,7 @@
         let currentTheme
         let switchButton
         let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
-        
+
         function switchTheme(e) {
             currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
             if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
@@ -31,7 +31,7 @@
             changeGiscusTheme(currentTheme);
             document.body.dispatchEvent(new CustomEvent(currentTheme + "-theme-set"));
         }
-        
+
         const autoChangeScheme = e => {
             currentTheme = e.matches ? 'dark' : 'light'
             document.documentElement.setAttribute('data-theme', currentTheme);
@@ -42,14 +42,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             switchButton = document.querySelector('.theme-switcher')
             currentTheme = detectCurrentScheme()
-            
+
             if (currentTheme === 'auto') {
                 autoChangeScheme(autoDefinedScheme);
                 autoDefinedScheme.addListener(autoChangeScheme);
             } else {
                 document.documentElement.setAttribute('data-theme', currentTheme)
             }
-        
+
             if (switchButton) {
                 switchButton.addEventListener('click', switchTheme, false)
             }
@@ -72,13 +72,13 @@
             document.body.style.opacity = 1;
         }
 
-        function changeGiscusTheme (theme) {           
+        function changeGiscusTheme (theme) {
             function sendMessage(message) {
               const iframe = document.querySelector('iframe.giscus-frame');
               if (!iframe) return;
               iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
             }
-        
+
             sendMessage({
               setConfig: {
                 theme: theme

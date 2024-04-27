@@ -179,7 +179,6 @@ kbd {
     line-height: 154%;
     border-radius: 6px;
     border: 1px solid var(--pre-border-color);
-    overflow: auto;
 }
 
 /* <code> tag */
@@ -212,8 +211,68 @@ pre kbd kbd {
     margin-right: 0.2em;
 }
 
-/* ```python``` like */
-pre code {
+p code,
+p kbd {
+    padding: 0.1em 0.3em;
+    /* top, bottom */
+    /* margin-right: 4px; */
+}
+
+td pre {
+    border: none;
+    /* padding: 0px; */
+    border-radius: 0px;
+}
+
+td:first-child pre {
+    padding-right: 0;
+}
+
+td:last-child pre {
+    padding-left: 0;
+}
+
+td pre code {
+    /* when there is a line number grid */
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    /* padding-top: 4px; */
+    /* padding-bottom: 4px; */
+}
+
+div.highlight {
+    border-radius: 6px;
+    border: 1px solid var(--pre-border-color);
+    margin-bottom: 14px;
+}
+
+div.highlight pre {
+    border: none;
+    display: grid;
+    margin: 0px;
+    overflow: auto; /* Have to add this line, otherwise the "pre" and "code" will have different width */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+}
+
+div.highlight code {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.highlight code a:hover,
+div.highlight code a:focus {
+    color: white;
+    border-bottom: 1px solid white;
+    /*for markup.highlight.anchorLineNos = true*/
+}
+
+pre code,
+pre kbd {
     color: inherit;
     background-color: inherit;
     border: none;
@@ -679,6 +738,8 @@ code.has-jax {
 .post-translations>li:not(:last-child)::after {
     content: "|";
     display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .post-translations>li a {
@@ -794,33 +855,30 @@ ul.footer-menu>li {
 /* Copy code  */
 .highlight {
     position: relative;
-    overflow: auto;
-}
-
-.highlight pre {
-    padding-right: 75px;
+    overflow: hidden;
 }
 
 .highlight:hover .highlight-copy-btn {
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .highlight-copy-btn {
     display: none;
     position: absolute;
-    top: 18px;
-    right: 2px;
-    border: 0;
+    top: 0px;
+    right: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     padding: 1px;
     font-size: 0.7em;
     line-height: 1.8;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
-    min-width: 25px;
+    min-width: 22px;
     text-align: center;
     transition: border 0.3s;
+    transition: background-color 0.3s;
 }
 
 .highlight-copy-btn:hover {
@@ -889,22 +947,3 @@ ul.footer-menu>li {
         max-width: 10em;
     }
 }
-
-{{ range site.Params.customCSS }}
-    {{ $custom := resources.Get . }}
-
-    {{ $custom.Content }}
-{{ end }}
-
-{{ if site.Params.isso.enabled }}
-
-#isso-thread .textarea {
-    color: #000;
-}
-
-#isso-thread .isso-feedlink {
-    position: relative;
-    z-index: 1;
-}
-
-{{ end }}
