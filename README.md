@@ -24,15 +24,17 @@ You need to install an extended version of Hugo to run this theme.
 
 ### As Git Submodule
 
-Inside the folder of your Hugo site run:
+Inside the folder of your Hugo site, run:
 
-    $ git submodule add https://github.com/Junyi-99/hugo-theme-anubis2.git themes/anubis2
+```bash
+git submodule add https://github.com/Junyi-99/hugo-theme-anubis2.git themes/anubis2
+```
 
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 ### Configure your site
 
-Don't be panic, configure Anubis2 is relatively simple.
+Don't be panic, configure Anubis2 is really simple.
 
 **This is the minimum configuration:**
 
@@ -40,27 +42,37 @@ Don't be panic, configure Anubis2 is relatively simple.
 baseURL = "https://hugo-theme-anubis2.netlify.app/"
 languageCode = "en-us"
 theme = "anubis2"
-title = "Anubis2 Demo Site"
+title = "Your Site's Name"
 
 [author]
-name = "Junyi"
+name = "Your Name"
 
 [markup.goldmark.renderer]
-unsafe = true # true | false; Enable unsafe mode to have a better experience
+unsafe = true # Enable unsafe mode to have a better experience
 
 [markup.highlight]
 style = 'base16-snazzy' # Highlight.js style
 ```
 
-It's not too late to keep the other fields as defaults and fine-tune them when you have time! (see [Configuration Example](https://github.com/Junyi-99/hugo-theme-anubis2/wiki/Configuration-Example))
+You are encouraged keeping other fields as defaults and fine-tune them when you have time! (see [Full Configuration Examples](https://github.com/Junyi-99/hugo-theme-anubis2/wiki/Configuration-Example))
 
-### Run your site
+## Run your site
 
 In order to see your site in action, run Hugo's built-in local server.
 
-`$ hugo server`
+```bash
+hugo server
+```
 
-Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
+Now enter [`http://localhost:1313`](http://localhost:1313/) in the address bar of your browser.
+
+## Update to the latest version
+
+In your Hugo site folder, run this command:
+
+```bash
+git submodule update --remote
+```
 
 ## Contributing
 
