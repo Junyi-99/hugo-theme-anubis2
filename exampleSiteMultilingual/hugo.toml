@@ -17,6 +17,8 @@ description = "Anubis2 is another simple minimalist theme for Hugo blog engine."
 dateFormat = "2006-01-02"
 paginationSinglePost = true
 
+# icp = "京ICP备xxxxx号-1" # for China ICP license
+
 colorTheme = "auto"
 colorThemeSwitcher = true
 
