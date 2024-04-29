@@ -18,6 +18,7 @@ dateFormat = "2006-01-02"
 paginationSinglePost = true
 
 # icp = "京ICP备xxxxx号-1" # for China ICP license
+# police = "京公网安备 xxxxxxxx号" # for China police beian
 
 colorTheme = "auto"
 colorThemeSwitcher = true
