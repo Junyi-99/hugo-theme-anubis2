@@ -18,7 +18,7 @@ dateFormat = "2006-01-02"
 paginationSinglePost = true
 
 # icp = "京ICP备xxxxx号-1" # for China ICP license
-# police = "京公网安备 xxxxxxxx号" # for China police beian
+# police = "京公网安备 12345678号" # for China police beian
 
 colorTheme = "auto"
 colorThemeSwitcher = true
@@ -169,37 +169,3 @@ id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                     
 datacache = false
 url = "https://eu.umami.is/script.js"
 shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
-
-
-# Experimental features
-[params.analytics]
-    [params.analytics.umami]
-        enabled = true
-        dnt = false
-        id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                            # Website ID
-        datacache = false
-        url = "https://eu.umami.is/script.js"
-        shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
-
-    [params.analytics.google]
-        enabled = false
-
-[params.comments]
-    [params.comments.giscus]
-        enabled = true
-        repo = "Junyi-99/hugo-theme-anubis2"
-        repoId = "R_kgDOLEp76Q"
-        category = "General"
-        categoryId = "DIC_kwDOLEp76c4CcbPS"
-        lazyload = false
-        datamapping = "pathname"
-    [params.comments.disqus]
-        enabled = false
-        shortname = ""
-    [params.comments.utterances]
-        enabled = false
-        repo = "Junyi-99/hugo-theme-anubis2"
-    [params.comments.isso]
-        enabled = false
-    [params.comments.graphcommentId]
-        enabled = false
