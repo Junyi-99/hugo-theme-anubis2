@@ -23,8 +23,8 @@
     </article>
 
     {{ $readNextPosts := 3}}
-    {{ if isset .Site.Params "readNextPosts" }}
-        {{ $readNextPosts := .Site.Params.readNextPosts }}
+    {{ if isset .Site.Params "readnextposts" }}
+        {{ $readNextPosts = .Site.Params.readNextPosts }}
     {{ end }}
 
     {{ if gt $readNextPosts 0 }}
