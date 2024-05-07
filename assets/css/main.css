@@ -179,6 +179,7 @@ kbd {
     line-height: 154%;
     border-radius: 6px;
     border: 1px solid var(--pre-border-color);
+    overflow: scroll;
 }
 
 /* <code> tag */
