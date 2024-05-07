@@ -263,6 +263,7 @@ div.highlight pre {
 div.highlight code {
     padding-left: 0px;
     padding-right: 0px;
+    overflow: unset;
 }
 
 div.highlight code a:hover,
