@@ -1,7 +1,7 @@
 +++
 author = "Hugo Authors"
 title = "Demo - Support for code, pre, kbd, mark"
-date = "2024-04-22"
+date = "2024-04-30"
 description = "Guide to advanced usage of Anubis2"
 tags = [
     "emoji",

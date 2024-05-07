@@ -1,7 +1,7 @@
 +++
 author = "Hugo Authors"
 title = "Demo - Support for Diagrams"
-date = "2024-04-19"
+date = "2024-05-06"
 description = "Guide to advanced usage of Anubis2"
 tags = [
     "emoji",

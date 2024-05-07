@@ -179,6 +179,7 @@ kbd {
     line-height: 154%;
     border-radius: 6px;
     border: 1px solid var(--pre-border-color);
+    overflow: scroll;
 }
 
 /* <code> tag */
@@ -262,6 +263,7 @@ div.highlight pre {
 div.highlight code {
     padding-left: 0px;
     padding-right: 0px;
+    overflow: unset;
 }
 
 div.highlight code a:hover,

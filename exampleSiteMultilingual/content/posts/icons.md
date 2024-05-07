@@ -1,7 +1,7 @@
 +++
 author = "Junyi"
 title = "Demo - Social Icons"
-date = "2024-04-23"
+date = "2024-05-05"
 description = "Guide to using social icons supported by Anubis2."
 tags = [
     "icons",
