@@ -59,8 +59,17 @@
 
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
 {{ range site.Params.customCSS }}
-    {{ with resources.Get . | toCSS $opts | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ $r := "" }}
+    {{ with resources.Get .  }}
+      {{ $r = . }}
+    {{ else }}
+      {{ errorf "error: You defined customCSS, but %s was not found, please check your config." . }}
+    {{ end }}
+
+    {{ if $r}}
+      {{ with $r | toCSS $opts | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
     {{ end }}
 {{ end }}
 
