@@ -1,0 +1,56 @@
+powered:
+  other: "Озорг"
+
+theme:
+  other: "тем"
+
+readMore:
+  other: "ДӀаеша"
+
+toNewPosts:
+  other: "керла дӀаяздаршка хӀо"
+
+toOldPosts:
+  other: "тиша дӀаяздаршка хӀо"
+
+tag:
+  other: "тег"
+
+Tags:
+  other: "Тегаш"
+
+Posts:
+  other: "ДӀаяздарш"
+
+category:
+  other: "категори"
+
+Categories:
+  other: "Категореш"
+
+toAllTags:
+  other: "тегаш лемаре хӀо"
+
+toAllAuthors:
+  other: "авторш лемаре хӀо"
+
+toAllCategories:
+  other: "категореш лемаре хӀо"
+
+skipToContent:
+  other: "коьрта контенте хӀо"
+
+readNext:
+  other: "ДӀаеша"
+
+lastMod:
+  other: "йуха яздин ю:"
+
+toNewPost:
+  other: "керла д1аяздаре хӀо"
+
+toOldPost:
+  other: "тиша дӀаяздаре хӀо"
+
+videoIsNotSupported:
+  other: "хӀа браузер окх видео цан болх ца бо"
