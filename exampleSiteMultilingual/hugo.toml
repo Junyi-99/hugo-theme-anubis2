@@ -172,4 +172,4 @@ shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlif
 
 [params.GoogleAnalytics]
 enabled = true
-gtag = "G-T5LM1515MT"
+gtag = "G-TAGEXAMPLE"
