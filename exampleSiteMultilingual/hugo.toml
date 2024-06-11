@@ -169,3 +169,7 @@ id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                     
 datacache = false
 url = "https://eu.umami.is/script.js"
 shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
+
+[params.GoogleAnalytics]
+enabled = true
+gtag = "G-T5LM1515MT"
