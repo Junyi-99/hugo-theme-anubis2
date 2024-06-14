@@ -18,11 +18,13 @@ Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo
 - Mobile Support
 - [Full Features](wiki/Full-Features)
 
-## Installation
+## Installation & Configuration
 
 You need to install an extended version of Hugo to run this theme.
 
-### As Git Submodule
+For more information read the [official setup guide of Hugo](https://gohugo.io/installation/).
+
+### Install theme as Git Submodule
 
 Inside the folder of your Hugo site, run:
 
@@ -30,11 +32,11 @@ Inside the folder of your Hugo site, run:
 git submodule add https://github.com/Junyi-99/hugo-theme-anubis2.git themes/anubis2
 ```
 
-For more information read the [official setup guide of Hugo](https://gohugo.io/installation/).
+That's all, let's configure anubis2.
 
 ### Configure your site
 
-Don't be panic, configure Anubis2 is really simple.
+Don't be panic, configure Anubis2 is really **simple**.
 
 **This is the minimum configuration:**
 
@@ -56,17 +58,19 @@ style = 'base16-snazzy' # Highlight.js style
 
 You are encouraged keeping other fields as defaults and fine-tune them when you have time! (see [Full Configuration Examples](https://github.com/Junyi-99/hugo-theme-anubis2/wiki/Configuration-Example))
 
+In the other way, you can check out the example site's [configuration file](exampleSiteMultilingual/hugo.toml)
+
 ## Run your site
 
-In order to see your site in action, run Hugo's built-in local server.
+In order to see your site, run Hugo's built-in local server.
 
 ```bash
 hugo server
 ```
 
-Now enter [`http://localhost:1313`](http://localhost:1313/) in the address bar of your browser.
+Now enter [`http://localhost:1313`](http://localhost:1313/) in the address bar of your browser to open your site.
 
-## Update to the latest version
+## Update Anubis2 to the latest version
 
 In your Hugo site folder, run this command:
 
@@ -79,4 +83,5 @@ git submodule update --remote
 If you find a bug or have an idea for a feature, feel free to write an [issue](https://github.com/Junyi-99/hugo-theme-anubis2/issues) or make a PR.
 
 ## License
+
 MIT © Junyi, 2024
