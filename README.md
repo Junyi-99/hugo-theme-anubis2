@@ -30,7 +30,7 @@ Inside the folder of your Hugo site, run:
 git submodule add https://github.com/Junyi-99/hugo-theme-anubis2.git themes/anubis2
 ```
 
-For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+For more information read the [official setup guide of Hugo](https://gohugo.io/installation/).
 
 ### Configure your site
 
