@@ -165,11 +165,11 @@ tabWidth           = 4
 [params.UmamiAnalytics]
 enabled = true
 dnt = false
-id = "e4f661ff-9a8c-49d4-b3cc-2efe553e3973"                                            # Website ID
+id = "d01ce82c-c8f4-4714-ba37-ba4899f2a885"                                            # Website ID
 datacache = false
-url = "https://eu.umami.is/script.js"
-shareUrl = "https://eu.umami.is/share/RIETUMwZn4IBMIr8/hugo-theme-anubis2.netlify.app"
+url = "https://umami.xtra.science/script.js"
+shareUrl = "https://umami.xtra.science/share/Fy0goUn0b9rrxxGe/hugo-theme-anubis2.netlify.app"
 
 [params.GoogleAnalytics]
 enabled = true
-gtag = "G-TAGEXAMPLE"
+gtag = "G-32F16X8HLF"
