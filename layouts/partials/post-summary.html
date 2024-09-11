@@ -2,13 +2,13 @@
     <div class="post-header">
         <header>
             {{ $random := (md5 .Title) }}
-            {{ $iconPath := printf "%s/icon.svg" .File.Dir }}
+            {{ $iconPath := printf "%sicon.svg" .File.Dir }}
             {{ if fileExists $iconPath }}
                 <style>
                     .post-icon-{{ $random }}::before {
                         display: inline-block;
                         content: '';
-                        background: url("{{ $iconPath }}");
+                        background: url("/{{ $iconPath }}");
                         width: 1.2em;
                         height: 1.2em;
                         background-size: auto 100%;
