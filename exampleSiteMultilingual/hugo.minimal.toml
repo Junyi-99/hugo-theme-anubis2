@@ -1,0 +1,13 @@
+baseURL = "https://hugo-theme-anubis2.netlify.app/"
+languageCode = "en-us"
+theme = "anubis2"
+title = "Anubis2 Demo Site"
+
+[params.author]
+name = "Junyi"
+
+[markup.goldmark.renderer]
+unsafe = true # true | false; Enable unsafe mode to have a better experience
+
+[markup.highlight]
+style = 'base16-snazzy' # Highlight.js style
