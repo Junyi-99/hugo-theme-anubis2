@@ -44,16 +44,17 @@ Don't be panic, configure Anubis2 is really **simple**.
 baseURL = "https://hugo-theme-anubis2.netlify.app/"
 languageCode = "en-us"
 theme = "anubis2"
-title = "Your Site's Name"
+title = "Anubis2 Demo Site"
 
-[author]
-name = "Your Name"
+[params.author]
+name = "Junyi"
 
 [markup.goldmark.renderer]
-unsafe = true # Enable unsafe mode to have a better experience
+unsafe = true # true | false; Enable unsafe mode to have a better experience
 
 [markup.highlight]
 style = 'base16-snazzy' # Highlight.js style
+
 ```
 
 You are encouraged keeping other fields as defaults and fine-tune them when you have time! (see [Full Configuration Examples](https://github.com/Junyi-99/hugo-theme-anubis2/wiki/Configuration-Example))
