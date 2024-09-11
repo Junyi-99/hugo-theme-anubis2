@@ -1,7 +1,24 @@
 <article class="post-list h-feed post-card">
     <div class="post-header">
         <header>
-            <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}}"><a class="u-url" href="{{ .RelPermalink }}">{{ trim .Title " " | markdownify }}</a></h1>
+            {{ $random := (md5 .Title) }}
+            {{ $iconPath := printf "%sicon.svg" .File.Dir }}
+            {{ if fileExists $iconPath }}
+                <style>
+                    .post-icon-{{ $random }}::before {
+                        display: inline-block;
+                        content: '';
+                        background: url("/{{ $iconPath }}");
+                        width: 1.2em;
+                        height: 1.2em;
+                        background-size: auto 100%;
+                        vertical-align: text-bottom;
+                    }
+                </style>
+            {{ end }}
+            <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}} {{ if fileExists $iconPath}}post-icon-{{$random}}{{end}}">
+                <a class="u-url" href="{{ .RelPermalink }}">{{ trim .Title " " | markdownify }}</a>
+            </h1>
         </header>
         {{ partial "post-language-switcher.html" . }}
     </div>
@@ -11,6 +28,7 @@
             {{ .Summary | safeHTML }}
         </div>
     {{ end }}
+
     {{ if and (.Truncated) (.Site.Params.readMore) }}
         <div class="read-more">
             <a class="u-url" href="{{ .RelPermalink }}">{{ i18n "readMore" }}</a>

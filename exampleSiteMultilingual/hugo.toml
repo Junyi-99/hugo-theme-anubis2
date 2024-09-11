@@ -3,11 +3,13 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Anubis2 Demo Site"
 theme = "anubis2"
-paginate = 5
-
 disqusShortname = ""
 
-[author]
+[pagination]
+pagerSize = 5
+
+
+[params.author]
 name = "Junyi"
 email  = "me@junyi.dev"
 location = "Singapore"

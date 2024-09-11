@@ -23,8 +23,8 @@
     </article>
 
     {{ $readNextPosts := 3}}
-    {{ if isset .Site.Params "readnextposts" }}
-        {{ $readNextPosts = .Site.Params.readNextPosts }}
+    {{ if site.Params.readNextPosts }}
+        {{ $readNextPosts = site.Params.readNextPosts }}
     {{ end }}
 
     {{ if gt $readNextPosts 0 }}
@@ -56,7 +56,7 @@
         {{ partial "resource.html" (dict "context" . "type" "js" "filename" "js/load-mermaid.js") }}
 
         {{ $colorTheme := "light" }}
-        {{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
+        {{ if and (site.Params.colortheme) (ne site.Params.colortheme "") }}
             {{ $colorTheme = site.Params.colortheme | lower }}
         {{ end }}
 
