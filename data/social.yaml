@@ -16,6 +16,7 @@ social_icons:
   vk: https://vk.com/%s
   youtube: https://www.youtube.com/c/%s
   4chan:
+  bluesky: https://bsky.app/profile/%s
   # docs:
   gitlab:
   leetcode: https://leetcode.com/%s
