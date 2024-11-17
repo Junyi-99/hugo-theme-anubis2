@@ -55,7 +55,8 @@ social = [
     { id = "netease-music", url = "#" },
     { id = "telegram", url = "#" },
     { id = "x", url = "#" },
-    { id = "youtube", url = "#" }
+    { id = "youtube", url = "#" },
+    { id = "bluesky", url = "#" }
 ]
 
 [[menu.main]]
