@@ -155,6 +155,8 @@ thead {
 table {
     max-width: 100%;
     border-spacing: 0;
+    display: block;
+    overflow: scroll;
 }
 
 
