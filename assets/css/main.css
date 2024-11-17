@@ -249,6 +249,10 @@ div.highlight {
     margin-bottom: 14px;
 }
 
+div.highlight div {
+    overflow: scroll;
+}
+
 div.highlight pre {
     border: none;
     display: grid;

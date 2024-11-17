@@ -53,7 +53,7 @@ name = "Junyi"
 unsafe = true # true | false; Enable unsafe mode to have a better experience
 
 [markup.highlight]
-style = 'base16-snazzy' # Highlight.js style
+style = 'base16-snazzy' # Chroma style, find more at here: https://swapoff.org/chroma/playground/
 
 ```
 
