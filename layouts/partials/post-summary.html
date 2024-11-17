@@ -34,6 +34,14 @@
             <a class="u-url" href="{{ .RelPermalink }}">{{ i18n "readMore" }}</a>
         </div>
     {{ end }}
+    
+    {{ if .Store.Get "hasMermaid" }}
+        {{ partial "mermaid_support.html" . }}
+    {{ end }}
+    
+    {{ if .Params.math }}
+        {{ partial "mathjax_support.html" . }}
+    {{ end }}
 
     {{ partial "post-info.html" . }}
 </article>
