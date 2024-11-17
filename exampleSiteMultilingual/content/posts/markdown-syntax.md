@@ -18,9 +18,7 @@ aliases = ["migrate-from-jekyl"]
 favorite = true
 +++
 
-[This article](https://www.baidu.com/) offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
-
-https://www.baidu.com
+This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
 
 <!--more-->

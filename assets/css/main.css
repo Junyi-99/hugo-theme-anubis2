@@ -154,16 +154,20 @@ thead {
 
 table {
     max-width: 100%;
-    border-spacing: 0;
     display: block;
     overflow: scroll;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 14px;
 }
-
 
 th,
 td {
-    padding: 0.5em 1em;
+    padding: 0.25em 0.5em;
     border: 1px double var(--table-border-color);
+
 }
 
 /* Code */
@@ -177,7 +181,8 @@ kbd {
     color: var(--pre-color);
     background-color: var(--pre-bg-color);
     font-family: 'Menlo', 'Courier New', 'Consolas', monospace;
-    font-size: 14.4px; /* 18px * 0.6 */
+    font-size: 14.4px;
+    /* 18px * 0.6 */
     line-height: 154%;
     border-radius: 6px;
     border: 1px solid var(--pre-border-color);
@@ -186,7 +191,8 @@ kbd {
 
 /* <code> tag */
 code {
-    font-size: 14.4px; /* 18px * 0.6 */
+    font-size: 14.4px;
+    /* 18px * 0.6 */
     padding: 0.1em 0.3em;
 }
 
@@ -205,7 +211,8 @@ p kbd,
 pre kbd,
 p kbd kbd,
 pre kbd kbd {
-    font-size: 14.4px; /* 18px * 0.6 */
+    font-size: 14.4px;
+    /* 18px * 0.6 */
     background-color: var(--kbd-bg-color);
     border: 1px solid var(--pre-border-color);
     border-width: 1px 2px 2px 1px;
@@ -259,7 +266,8 @@ div.highlight pre {
     border: none;
     display: grid;
     margin: 0px;
-    overflow: auto; /* Have to add this line, otherwise the "pre" and "code" will have different width */
+    overflow: auto;
+    /* Have to add this line, otherwise the "pre" and "code" will have different width */
     /* padding-left: 10px; */
     /* padding-right: 10px; */
     /* padding-top: 10px; */
