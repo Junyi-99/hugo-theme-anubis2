@@ -8,6 +8,7 @@
         {{ range (.Paginate $pages).Pages }}
             {{ partial "post-summary.html" . }}
         {{ end }}
+        
         {{ partial "pagination.html" . }}
     </div>
 

@@ -63,7 +63,7 @@
     {{ with resources.Get .  }}
       {{ $r = . }}
     {{ else }}
-      {{ errorf "error: You defined customCSS, but %s was not found, please check your config." . }}
+      {{ errorf "error: You defined customCSS, but %s was not found in the local file system, please check your config." . }}
     {{ end }}
 
     {{ if $r}}

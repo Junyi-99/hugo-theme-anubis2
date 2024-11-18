@@ -10,7 +10,31 @@ tags = [
 ]
 +++
 
-There are 9 tests.
+```c {linenos=table, hl_lines=[1,"3-4",8], linenostart=199}
+int main() {
+    int a = 1;
+    if (a == 999)
+        // This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+        // If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+    }
+    return 0;
+}
+```
+
+## Truth Table
+
+| Item                     | Line Numbers | Highlight Lines | Anchor Lines | Wide CodeBlock Scroll | Supported |
+| ------------------------ | ------------ | --------------- | ------------ | --------------------- | --------- |
+| **Full Feature Support** | ture         | true            | true         | ✅                     | ✅         |
+|                          | table        | true            | true         | ✅                     | ✅         |
+|                          | table        | true            | false        | ✅                     | ✅         |
+|                          | inline       |                 |              | ✅                     | ✅         |
+|                          | ture         | true            | false        | ✅                     | ✅         |
+|                          | ture         | false           | false        | ✅                     | ✅         |
+|                          | false        | true            | /            | ✅                     | ✅         |
+| Basic Support            | false        | false           | /            | ✅                     | ✅         |
+
+Note: Anubis2 does not support `hl_inline=true`
 
 <!--more-->
 
@@ -45,7 +69,7 @@ int main() {
 int main() {
     int a = 1;
     if (a == 999)
-                // This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+        // This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
         // If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
     }
     return 0;
@@ -102,29 +126,33 @@ Now you can click on the line number to get a link to that line.
 int main() {
     int a = 1;
     if (a == 999)
-                // This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+        // This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
         // If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
     }
     return 0;
 }
 ```
 
-### Line Number (table) and Highlight Inline (❌ Not supported by Anubis2)
+### Highlight Inline are not supported by Anubis2 ❌
 
-    ```c {linenos=true,hl_lines=[1,"3-4",8], hl_inline=true}
+    ```c {linenos=true,hl_lines=[1,3,5], hl_inline=true}
     // codes ...
     ```
 
-```c {linenos=true,hl_lines=[1,"3-4",8], hl_inline=true}
+```c {linenos=true,hl_lines=[1,3,5], hl_inline=true}
 int main() {
     int a = 1;
     if (a == 999)
-                // This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
         // If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
     }
     return 0;
 }
 ```
+
+
+<!-- 
+
+Those are trash codes.
 
 ### Highlight shortcode, with Line Number (table), with Highlight Lines and Anchor
 
@@ -175,4 +203,4 @@ if (a == 999)
 }
 return 0;
 }
-{{< / highlight >}}
+{{< / highlight >}} -->
