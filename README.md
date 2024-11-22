@@ -2,10 +2,23 @@
 
 Anubis2 is another simple minimalist theme for [Hugo blog engine](https://gohugo.io/), check our [Demo](https://www.junyi.dev/).
 
-> 📝 Please note that anubis2 is under active maintenance, so please REMEMBER to keep your theme up to date!
+> [!IMPORTANT]  
+> **Update Your Blog Configuration**  
+> Please ensure your blog configuration file (`hugo.toml`, `hugo.yaml`, or `hugo.json`) is updated to the latest version provided with the template.
+> 
+> **Hugo frequently changes its configuration file structure**, which may lead to compatibility issues if your configuration is outdated.
 >
+> Check the [Anubis2 template](https://github.com/Junyi-99/hugo-theme-anubis2/tree/main/exampleSiteMultilingual) for the latest config file.  
+
 
 ![image](https://github.com/Junyi-99/hugo-theme-anubis2/assets/14367694/8d9a591b-e168-4328-a770-eb2e8f04f657)
+
+|                                                        Light                                                         |                                                     Dark (Code)                                                      |                                                     Dark (Math)                                                      |
+| :------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
+| <img width="1166" alt="demo1" src="https://github.com/user-attachments/assets/dbdd43bc-3efe-4fdf-ab8f-f20af2cf9229"> | <img width="1112" alt="demo3" src="https://github.com/user-attachments/assets/7356ef18-00c7-44c9-91d9-0dfb9b500910"> | <img width="1166" alt="demo2" src="https://github.com/user-attachments/assets/46e19440-b054-4df9-968b-7920d74f3d80"> |
+
+
+
 
 ## Highlighted Features
 
