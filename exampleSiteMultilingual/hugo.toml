@@ -38,7 +38,7 @@ graphcommentId = ""
 
 GiscusRepo = "Junyi-99/hugo-theme-anubis2"
 GiscusRepoId = "R_kgDOLEp76Q"
-GiscusCategory = "General"
+GiscusDiscussionCategory = "General"
 GiscusCategoryId = "DIC_kwDOLEp76c4CcbPS"
 GiscusLazyLoad = false
 GiscusDataMapping = "pathname"
