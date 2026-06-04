@@ -20,8 +20,8 @@ html {
 
 body {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     color: var(--font-color);
     background: var(--bg-color);
@@ -79,18 +79,35 @@ main {
     padding: 0px;
 }
 
+.toc ul {
+    padding-left: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
 /* Headers */
 h1 {
-    font-size: 1.35rem;
+    font-size: 1.4em;
+    letter-spacing: -0.01em;
 }
 
 h2 {
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    color: var(--title-color);
+    font-size: 1.25em;
+    margin-top: 2.5em;
+    margin-bottom: 0.75em;
+    letter-spacing: -0.01em;
+}
+
+h2:first-of-type {
+    margin-top: 0;
 }
 
 h3 {
-    font-size: 1.1rem;
+    color: var(--title-color);
+    font-size: 1.1em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
 }
 
 /* Links */
@@ -199,9 +216,8 @@ code {
 }
 
 pre {
-    padding: 0.6rem;
-    margin-bottom: 1rem;
-    overflow: auto;
+    padding: 0.75em;
+    margin-bottom: 1em;
 }
 
 pre:has(code.language-txt) {
@@ -264,7 +280,8 @@ td pre code {
 div.highlight {
     border-radius: 6px;
     border: 1px solid var(--pre-border-color);
-    margin-bottom: 0.8rem;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
     overflow: hidden;
 }
 
@@ -310,14 +327,16 @@ pre kbd {
 /* Styles */
 
 blockquote {
-    border-left: 2px solid var(--bq-color);
-    padding: 0.1rem 1rem;
-    margin-left: 0.75rem;
+    border-left: 3px solid var(--bq-color);
+    padding: 0.25em 1.25em;
+    margin-left: 0.5em;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
 }
 
 p {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
 
 hr {
@@ -335,12 +354,13 @@ hr {
 }
 
 header a {
-    color: var(--font-color);
+    color: var(--title-color);
 }
 
 header h1 {
-    font-size: 1rem;
-    margin-top: 1rem;
+    color: var(--title-color);
+    font-size: 18px;
+    margin-top: 1em;
     margin-bottom: 0;
     font-weight: normal;
 }
@@ -468,9 +488,10 @@ article:not(:last-of-type) {
 }
 
 .post-header {
-    margin-top: 0rem;
-    line-height: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 14px;
+    margin-top: 1em;
+    line-height: 1.4em;
+    margin-bottom: 1.5em;
 }
 
 .post-header header {
@@ -532,14 +553,15 @@ article:not(:last-of-type) {
 } */
 
 article header h1 {
-    font-size: 1.35rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.35em;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
     font-weight: 600;
     display: inline;
 }
 
 article header h1 a {
-    color: var(--font-color);
+    color: var(--title-color);
     border: none;
     text-decoration: none;
     line-height: 2rem;
@@ -627,16 +649,16 @@ article header h1 a {
 
 .post-list .post-info {
     color: var(--post-info-color);
-    font-size: 0.75rem;
-    margin-top: 1rem;
+    font-size: 12px;
+    margin-top: 1em;
     display: block;
     gap: 1rem;
 }
 
 .post-info {
     color: var(--post-info-color);
-    font-size: 0.75rem;
-    margin-top: 1rem;
+    font-size: 12px;
+    margin-top: 1em;
     display: flex;
     gap: 1rem;
 }
@@ -709,21 +731,22 @@ article img {
     max-width: 100%;
     display: block;
     height: auto;
-    margin: 0 auto .5rem;
+    margin: 1.5em auto;
 }
 
 article figcaption {
     color: grey;
     text-align: center;
-    font-size: 0.85rem;
-    margin-bottom: 2rem;
+    font-size: 0.85em;
+    margin-top: -1em;
+    margin-bottom: 1.5em;
 }
 
 article video {
     max-width: 100%;
     display: block;
     height: auto;
-    margin: 0 auto .5rem;
+    margin: 1.5em auto;
 }
 
 code.has-jax {
@@ -734,7 +757,8 @@ code.has-jax {
 }
 
 .read-more {
-    margin: 1rem 0;
+    margin: 1em 0;
+    font-size: 14px;
 }
 
 .divider {
@@ -749,6 +773,7 @@ code.has-jax {
 .post-summary {
     margin-top: 0.5rem;
     display: block;
+    font-size: 14px;
 }
 
 .post-summary>p {
@@ -760,7 +785,8 @@ code.has-jax {
     list-style: none;
     padding: 0;
     display: inline;
-    font-size: 0.8rem;
+    font-size: 12px;
+    color: var(--font-color);
 }
 
 .post-translations>li {
@@ -810,6 +836,7 @@ code.has-jax {
     justify-content: space-between;
     margin-top: 3rem;
     text-align: center;
+    font-size: 14px;
 }
 
 .pagination-item {
@@ -1028,4 +1055,27 @@ ul.footer-menu>li {
     .post-pagination .pagination-item {
         max-width: 10rem;
     }
+}
+
+.e-content {
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.e-content ul,
+.e-content ol {
+    padding-left: 1.5em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.e-content li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.e-content li > ul,
+.e-content li > ol {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
 }
