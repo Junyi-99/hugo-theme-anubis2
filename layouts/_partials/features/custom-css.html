@@ -1,7 +1,9 @@
 
-{{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
-
 {{ $params := partial "params-helper.html" . }}
+
+{{/* transpiler is configurable; set params.anubis2.cssTranspiler = "dartsass" (requires the
+     dart-sass binary at build time) to clear the libsass deprecation warning. */}}
+{{ $opts := dict "transpiler" $params.cssTranspiler "targetPath" "css/style.css" }}
 
 {{ range $params.customCSS }}
     <!-- Support remote custom css -->
@@ -19,7 +21,11 @@
     {{ end }}
 
     {{ if $r }}
-    {{ with $r | toCSS $opts | minify | fingerprint }}
+    {{/* only Sass/SCSS needs transpiling; plain .css passes straight through */}}
+    {{ if or (hasSuffix . ".scss") (hasSuffix . ".sass") }}
+      {{ $r = $r | toCSS $opts }}
+    {{ end }}
+    {{ with $r | minify | fingerprint }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{ end }}
     {{ end }}
