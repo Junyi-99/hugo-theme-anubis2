@@ -8,7 +8,7 @@
     {{ $dataTheme = $params.colorTheme }}
 {{ end }}
 
-<html lang="{{ site.Params.locale | default site.LanguageCode }}" data-theme="{{ $dataTheme }}">
+<html lang="{{ site.Params.locale | default site.Language.Locale }}" data-theme="{{ $dataTheme }}">
 <head>
     {{ block "head" . }}
         {{ partial "head/head.html" . }}

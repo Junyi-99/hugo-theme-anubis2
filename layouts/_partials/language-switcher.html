@@ -7,9 +7,9 @@
 
     {{ range $translations }}
         {{ if eq .Lang $pageLang }}
-            <li>{{ .Language.LanguageName }}</li>
+            <li>{{ .Language.Label }}</li>
         {{ else }}
-            <li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a></li>
+            <li><a href="{{ .RelPermalink }}">{{ .Language.Label }}</a></li>
         {{ end }}
     {{ end }}
 </ul>

@@ -1,5 +1,5 @@
 baseURL = "/"
-languageCode = "en-us"
+locale = "en-us"
 title = "Anubis2 Demo Site"
 theme = "anubis2"
 

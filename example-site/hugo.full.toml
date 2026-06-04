@@ -1,5 +1,5 @@
 baseURL = "/"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 title = "Anubis2 Demo Site"
 theme = "anubis2"
@@ -124,10 +124,10 @@ weight = 4
 
 [languages]
 [languages.en]
-languageName = "English"
+label = "English"
 
 [languages.pl]
-languageName = "Polski"
+label = "Polski"
 
 [[languages.pl.menu.main]]
 identifier = "home"
@@ -154,10 +154,10 @@ url = "/posts/"
 weight = 4
 
 [languages.pl.params]
-languageCode = "pl-pl"
+locale = "pl-pl"
 
 [languages.zh]
-languageName = "Chinese"
+label = "Chinese"
 
 [[languages.zh.menu.main]]
 identifier = "home"
@@ -184,7 +184,7 @@ url = "/posts/"
 weight = 4
 
 [languages.zh.params]
-languageCode = "zh-cn"
+locale = "zh-cn"
 
 [taxonomies]
 category = "categories"

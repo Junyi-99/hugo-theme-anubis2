@@ -15,7 +15,7 @@
     {{ with site.Params.copyright }}
     <copyright>{{ . }}</copyright>{{ end }}
     <generator>Hugo (https://gohugo.io)</generator>
-    {{ with site.LanguageCode }}
+    {{ with site.Language.Locale }}
     <language>{{.}}</language>{{end}}
     {{ with site.Params.author.name }}
     <managingEditor>{{ with site.Params.author.email }}{{ . }}{{ with site.Params.author.name }} ({{ . }}){{ end }}{{ end }}</managingEditor>{{ end }}
