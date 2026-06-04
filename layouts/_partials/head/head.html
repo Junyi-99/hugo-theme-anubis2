@@ -29,21 +29,22 @@
 {{ $params := partial "params-helper.html" . }}
 
 {{ if or (eq $params.enableColorThemeSwitcher true) (eq $params.colorTheme "auto") }}
-<style>
-  body {
-    visibility: hidden;
-    opacity: 0;
-  }
-</style>
-
-<noscript>
-  <style>
-    body {
-      visibility: visible;
-      opacity: 1;
+{{/* Set the theme on <html> synchronously before first paint to avoid a flash,
+     without ever hiding the body. Mirrors the storage key / logic in theme-switcher.html. */}}
+<script>
+  (function () {
+    var STORAGE_KEY = 'user-color-scheme';
+    var defaultTheme = "{{ $params.colorTheme }}";
+    var theme;
+    try { theme = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (!theme) {
+      theme = (defaultTheme && defaultTheme !== 'auto')
+        ? defaultTheme
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     }
-  </style>
-</noscript>
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 {{end}}
 
 {{ partial "resource.html" (dict "context" . "type" "css" "filename" "css/main.css") }}

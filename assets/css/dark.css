@@ -30,7 +30,7 @@
         --pagination-border-color: #333333;
         --pagination-border-radius: 5px;
 
-        --post-info-color: grey;
+        --post-info-color: #9a9a9a;
 
         --switcher-color: #fff;
 
@@ -70,7 +70,7 @@ html[data-theme='dark'] {
     --pagination-border-color: #333333;
     --pagination-border-radius: 5px;
 
-    --post-info-color: grey;
+    --post-info-color: #9a9a9a;
 
     --switcher-color: #fff;
 

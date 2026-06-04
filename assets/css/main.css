@@ -424,9 +424,33 @@ header nav a {
     margin-left: var(--icon-margin-left);
 }
 
+/* >=44x44 touch target for icon links and the theme-toggle button */
+.social-icons a,
+.social-icons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    vertical-align: middle;
+}
+
+/* theme-toggle button reset: render identically to the icon anchors */
+.social-icons button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
 .social-icons a:hover,
 .social-icons a:focus,
-.social-icons a:active {
+.social-icons a:active,
+.social-icons button:hover,
+.social-icons button:focus,
+.social-icons button:active {
     color: inherit;
     border-bottom: none;
     text-decoration: none;
@@ -997,6 +1021,14 @@ ul.footer-menu>li {
 
 /* Reduced motion: remove transitions */
 @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
     .highlight-copy-btn {
         transition: none;
     }

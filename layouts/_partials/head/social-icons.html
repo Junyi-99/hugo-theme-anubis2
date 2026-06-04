@@ -3,9 +3,9 @@
 {{ if or (eq $params.enableColorThemeSwitcher true) (eq $params.colorTheme "auto") }}
     {{ if $params.enableColorThemeSwitcher }}
         <li>
-            <a href="#" id="theme-toggle">
+            <button id="theme-toggle" type="button" aria-label="{{ i18n "toggleTheme" | default "Toggle color theme" }}">
             {{ partial "features/font-awesome.html" (dict "iconName" "theme-light" "custom" false) }}
-            </a>
+            </button>
         </li>
     {{ end }}
 {{ end }}

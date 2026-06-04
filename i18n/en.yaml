@@ -57,3 +57,6 @@ toOldPost:
 
 videoIsNotSupported:
   other: "Your browser does not support video"
+
+toggleTheme:
+  other: "Toggle color theme"

@@ -45,3 +45,6 @@ skipToContent:
 
 readNext:
   other: "继续阅读"
+
+toggleTheme:
+  other: "切换主题"
