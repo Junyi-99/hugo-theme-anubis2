@@ -47,15 +47,9 @@ limit = 40 # how many posts to include in the feed
     socialIcons = [
         { id = "docs", url = "https://gohugo.io/documentation/" },
         { id = "github", url = "https://github.com/hugo-theme-anubis2/hugo-theme-anubis2" },
-        { id = "linkedin", url = "https://www.linkedin.com/" },
-        { id = "email", url = "example@example.com" },
-        { id = "facebook", url = "#" },
-        { id = "instagram", url = "#" },
-        { id = "netease-music", url = "#" },
-        { id = "telegram", url = "#" },
         { id = "x", url = "#" },
-        { id = "youtube", url = "#" },
-        { id = "bluesky", url = "#" }
+        { id = "linkedin", url = "https://www.linkedin.com/" },
+        { id = "email", url = "example@example.com" }
     ]
 
     customCSS = [

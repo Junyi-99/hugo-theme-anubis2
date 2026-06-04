@@ -376,27 +376,32 @@ header h2 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    vertical-align: middle;
-    margin-top: 1rem;
+    /* container owns the vertical rhythm; children stay margin-free */
+    padding: 1rem 0;
 }
 
 .header-top-left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* container owns the gap between title and icons */
+    gap: 1rem;
 }
 
 .site-title {
     display: inline;
     white-space: nowrap;
     font-weight: 700;
+    margin: 0;
 }
 
 header nav:not(:empty) {
     background: var(--nav-bg-color);
-    margin-top: var(--card-margin);
     max-width: 100%;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* container owns the spacing between links */
+    gap: 0.5rem 5%;
     padding: 0.5rem 0;
     border: 1px solid var(--card-border-color);
     border-radius: var(--card-border-radius);
@@ -405,23 +410,21 @@ header nav:not(:empty) {
 
 header nav a {
     display: inline-block;
-    margin: 0 2.5%;
+    margin: 0;
 }
 
 /* Social icons */
 .social-icons {
-    display: inline;
-    margin: var(--icon-margin-top) 0 0 var(--icon-margin-left);
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
 .social-icons li {
-    display: inline;
-}
-
-.social-icons li:not(:first-of-type) {
-    margin-left: var(--icon-margin-left);
+    display: inline-flex;
+    align-items: center;
 }
 
 /* >=44x44 touch target for icon links and the theme-toggle button */
@@ -457,11 +460,16 @@ header nav a {
 }
 
 .inline-svg {
-    display: inline-block;
-    height: 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* size the actual svg (icons ship with hardcoded width/height="24") */
+.inline-svg svg {
+    display: block;
     width: 1.15rem;
-    top: 0.15rem;
-    position: relative;
+    height: 1.15rem;
 }
 
 
@@ -513,9 +521,7 @@ article:not(:last-of-type) {
 
 .post-header {
     font-size: 14px;
-    margin-top: 1em;
     line-height: 1.4em;
-    margin-bottom: 1.5em;
 }
 
 .post-header header {
