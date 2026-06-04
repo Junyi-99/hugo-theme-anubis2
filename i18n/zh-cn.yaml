@@ -1,0 +1,50 @@
+powered:
+  other: "Powered by"
+
+theme:
+  other: "theme"
+
+readMore:
+  other: "阅读更多"
+
+toNewPosts:
+  other: "新文章"
+
+toOldPosts:
+  other: "旧文章"
+
+tag:
+  other: "标签"
+
+author:
+  other: "作者"
+
+Tags:
+  other: "标签"
+
+Posts:
+  other: "文章"
+
+category:
+  other: "类别"
+
+Categories:
+  other: "类别"
+
+toAllTags:
+  other: "所有标签"
+
+toAllAuthors:
+  other: "所有作者"
+
+toAllCategories:
+  other: "所有类别"
+
+skipToContent:
+  other: "跳至内容"
+
+readNext:
+  other: "继续阅读"
+
+toggleTheme:
+  other: "切换主题"

@@ -590,6 +590,15 @@ article header h1 {
     display: inline;
 }
 
+/* List/section page heading (e.g. the archive title): keep it the same size as a
+   single post's <h1> instead of the larger generic h1 (1.4em). */
+.articles > h1.post-title {
+    font-size: 1.35em;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
 article header h1 a {
     color: var(--title-color);
     border: none;
