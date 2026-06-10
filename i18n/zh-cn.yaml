@@ -48,3 +48,9 @@ readNext:
 
 toggleTheme:
   other: "切换主题"
+
+humanDeclTitle:
+  other: "人工撰写声明"
+
+humanDeclDesc:
+  other: "作者声明：本文由人工编写，核心数据与论述均非 AI 生成（仅使用 AI 润色文字）。"

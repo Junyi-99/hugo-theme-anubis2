@@ -7,6 +7,7 @@
     {{ else }}
         <article class="post h-entry">
             <div class="post-header">
+                <div class="post-title-row{{ if .Params.humanDeclared }} has-decl{{ end }}">
                 <header>
                     {{ $random := (md5 .Title) }}
                     {{ $iconPath := printf "%sicon.svg" .File.Dir }}
@@ -27,6 +28,10 @@
                     <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}} {{ if fileExists $iconPath}}post-icon-{{$random}}{{end}}">{{ trim .Title  " " | markdownify }}</h1>
                     {{ partial "post-language-switcher.html" . }}
                 </header>
+                {{ if .Params.humanDeclared }}
+                    {{ partial "human-declaration.html" . }}
+                {{ end }}
+                </div>
                 {{ partial "post-info.html" . }}
             </div>
             {{ partial "toc.html" .}}

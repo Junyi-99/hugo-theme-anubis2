@@ -60,3 +60,9 @@ videoIsNotSupported:
 
 toggleTheme:
   other: "Toggle color theme"
+
+humanDeclTitle:
+  other: "Human-written declaration"
+
+humanDeclDesc:
+  other: "The author declares this article is human-written; its core data and statements are not AI-generated (AI was used only to polish wording)."

@@ -70,4 +70,53 @@
 .hint-important::before {
     content: "Important";
     color: hsl(280, 100%, 50%);
+}
+
+/* Title row: title on the left, declaration badge on the right.
+   When they don't fit together, the badge wraps to its own line (left-aligned). */
+.post-title-row.has-decl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem 1rem;
+}
+
+.post-title-row.has-decl > header {
+    flex: 1 1 auto;
+}
+
+/* Human-written declaration badge */
+.human-decl {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    width: fit-content;
+    margin: 0;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--card-border-color);
+    border-radius: 999px;
+    background-color: var(--card-color);
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: help;
+}
+
+.human-decl__seal {
+    flex-shrink: 0;
+    color: hsl(137.23deg 66.01% 35%);
+    display: flex;
+    align-items: center;
+}
+
+.human-decl__seal svg {
+    display: block;
+}
+
+.human-decl__title {
+    font-weight: 600;
+    line-height: 1;
+    color: var(--title-color);
 } 

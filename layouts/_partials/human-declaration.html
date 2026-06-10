@@ -1,0 +1,25 @@
+{{/*
+  Author's declaration of human authorship.
+  Rendered when a post sets `humanDeclared: true` in its front matter.
+  Compact badge on its own line below the title; full statement shown as a
+  tooltip on hover. Meaning: the author declares the article is human-written
+  and its core data and statements are not AI-generated (AI polishing of
+  wording is allowed).
+*/}}
+<aside class="human-decl" role="note" tabindex="0"
+       title="{{ i18n `humanDeclDesc` }}"
+       aria-label="{{ i18n `humanDeclTitle` }}. {{ i18n `humanDeclDesc` }}">
+    <span class="human-decl__seal" aria-hidden="true">
+        {{/* Tabler Icons "certificate" (MIT). https://tabler.io/icons */}}
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+             stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+            <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"/>
+            <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73"/>
+            <path d="M6 9l12 0"/>
+            <path d="M6 12l3 0"/>
+            <path d="M6 15l2 0"/>
+        </svg>
+    </span>
+    <span class="human-decl__title">{{ i18n "humanDeclTitle" }}</span>
+</aside>
