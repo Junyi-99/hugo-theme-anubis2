@@ -175,6 +175,8 @@ table {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     font-size: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .highlight table {
@@ -779,6 +781,10 @@ article figcaption {
     font-size: 0.85em;
     margin-top: -1em;
     margin-bottom: 1.5em;
+}
+
+article table + figcaption {
+    margin-top: 0.5em;
 }
 
 article video {
