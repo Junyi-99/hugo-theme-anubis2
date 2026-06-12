@@ -584,7 +584,7 @@ article:not(:last-of-type) {
     padding-bottom: 2rem;
 } */
 
-article header h1 {
+article header :is(h1, h2) {
     font-size: 1.35em;
     line-height: 1.5em;
     margin-bottom: 0.5em;
@@ -601,7 +601,7 @@ article header h1 {
     font-weight: 600;
 }
 
-article header h1 a {
+article header :is(h1, h2) a {
     color: var(--title-color);
     border: none;
     text-decoration: none;

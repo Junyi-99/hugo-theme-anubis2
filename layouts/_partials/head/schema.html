@@ -1,0 +1,37 @@
+{{/* JSON-LD structured data.
+     - Home: WebSite + Person
+     - Blog posts: BlogPosting + BreadcrumbList
+     - Other inner pages: BreadcrumbList
+     Built with dict + jsonify so all values are correctly escaped. safeJS keeps
+     the JSON raw inside <script> (otherwise html/template wraps it as a JS string). */}}
+{{ if not .Params.private }}
+{{ $root := site.BaseURL }}
+{{ $personID := printf "%s#person" $root }}
+{{ $authorName := "" }}
+{{ with site.Params.author }}{{ $authorName = .name | default . }}{{ end }}
+{{ $sameAs := slice }}
+{{ range site.Params.anubis2.socialIcons }}{{ with .url }}{{ $sameAs = $sameAs | append . }}{{ end }}{{ end }}
+{{ $person := dict "@type" "Person" "@id" $personID "name" $authorName "url" $root }}
+{{ with $sameAs }}{{ $person = merge $person (dict "sameAs" .) }}{{ end }}
+{{ $nodes := slice }}
+{{ if .IsHome }}
+  {{ $website := dict "@type" "WebSite" "@id" (printf "%s#website" $root) "url" .Permalink "name" site.Title "inLanguage" .Language.Lang "publisher" (dict "@id" $personID) }}
+  {{ $nodes = $nodes | append $website $person }}
+{{ else }}
+  {{ $crumbs := slice (dict "name" site.Title "item" site.Home.Permalink) }}
+  {{ if and .IsPage .CurrentSection (ne .CurrentSection.Permalink site.Home.Permalink) }}
+    {{ $crumbs = $crumbs | append (dict "name" (.CurrentSection.Title | default .Section) "item" .CurrentSection.Permalink) }}
+  {{ end }}
+  {{ $crumbs = $crumbs | append (dict "name" .Title "item" .Permalink) }}
+  {{ $items := slice }}
+  {{ range $i, $c := $crumbs }}{{ $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" $c.name "item" $c.item) }}{{ end }}
+  {{ $nodes = $nodes | append (dict "@type" "BreadcrumbList" "itemListElement" $items) }}
+  {{ if and .IsPage (in site.Params.mainSections .Section) }}
+    {{ $posting := dict "@type" "BlogPosting" "@id" (printf "%s#article" .Permalink) "headline" .Title "mainEntityOfPage" .Permalink "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") "inLanguage" .Language.Lang "author" (dict "@id" $personID) "publisher" (dict "@id" $personID) }}
+    {{ with (.Description | default .Summary) }}{{ $posting = merge $posting (dict "description" .) }}{{ end }}
+    {{ with .Params.images }}{{ $posting = merge $posting (dict "image" (index . 0 | absURL)) }}{{ end }}
+    {{ $nodes = $nodes | append $posting $person }}
+  {{ end }}
+{{ end }}
+{{ with $nodes }}<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@graph" .) | jsonify | safeJS }}</script>{{ end }}
+{{ end }}

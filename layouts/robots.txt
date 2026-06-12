@@ -1,7 +1,9 @@
 User-agent: *
 # robotstxt.org - if environment is not `production` then robots will be disallowed.
 {{ if hugo.IsProduction }}
-  Disallow:
+Disallow:
+
+Sitemap: {{ "sitemap.xml" | absURL }}
 {{ else }}
-  Disallow: /
+Disallow: /
 {{ end }}

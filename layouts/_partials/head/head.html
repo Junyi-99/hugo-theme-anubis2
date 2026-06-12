@@ -15,6 +15,16 @@
   <meta name="copyright" content="{{ with site.Params.copyright }}{{ . }}{{ else }}{{ with site.Params.author }}{{ . }}{{ end }}{{ end -}}">
   <meta name="generator" content="Hugo {{ hugo.Version }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{/* hreflang alternates: emit one per language version, plus x-default → English.
+       .AllTranslations includes the current page, so it self-references too. */}}
+  {{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+      <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+    {{ end }}
+    {{ range .AllTranslations }}{{ if eq .Language.Lang "en" }}
+      <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+    {{ end }}{{ end }}
+  {{ end }}
   {{ with .Keywords }}
       <meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }},{{ end }}{{ $e }}{{ end }}">
   {{ end }}
@@ -25,6 +35,8 @@
 {{ end -}}
 
 {{ partial "head/favicons.html" . }}
+
+{{ partial "head/schema.html" . }}
 
 {{ $params := partial "params-helper.html" . }}
 

@@ -23,9 +23,9 @@
                         }
                     </style>
                 {{ end }}
-                <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}} {{ if fileExists $iconPath}}post-icon-{{$random}}{{end}}">
+                <h2 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}} {{ if fileExists $iconPath}}post-icon-{{$random}}{{end}}">
                     <a class="u-url" href="{{ .RelPermalink }}">{{ trim .Title " " | markdownify }}</a>
-                </h1>
+                </h2>
             </header>
             {{ partial "post-language-switcher.html" . }}
         </div>

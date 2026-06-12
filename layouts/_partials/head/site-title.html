@@ -1,3 +1,11 @@
+{{/* Site title is the page <h1> only on the homepage; on inner pages the
+     page/post title owns the single <h1>, so the site title is a <p>. */}}
+{{ if .IsHome }}
 <h1 class="site-title noselect">
     <a href="{{ site.BaseURL | relLangURL }}">{{ site.Title }}</a>
 </h1>
+{{ else }}
+<p class="site-title noselect">
+    <a href="{{ site.BaseURL | relLangURL }}">{{ site.Title }}</a>
+</p>
+{{ end }}

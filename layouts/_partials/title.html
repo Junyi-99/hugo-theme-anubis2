@@ -1,5 +1,7 @@
 {{ if .Params.private }}
     <title>Private Page - {{ site.Title | markdownify }}</title>
+{{ else if .IsHome }}
+    <title>{{ site.Title | markdownify }}{{ with site.Params.homeTitleSuffix }} - {{ . }}{{ end }}</title>
 {{ else }}
-    <title>{{ if and (.Title) (not .IsHome) }}{{ .Title | markdownify }} - {{ end }}{{ site.Title | markdownify }}</title>
+    <title>{{ if .Title }}{{ .Title | markdownify }} - {{ end }}{{ site.Title | markdownify }}</title>
 {{ end }}
